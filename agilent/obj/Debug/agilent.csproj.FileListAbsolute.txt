@@ -1,0 +1,7 @@
+D:\Git\MTestSystem\AutoWelding2.0.1.1_140911-5A\agilent\bin\Debug\agilent.dll
+D:\Git\MTestSystem\AutoWelding2.0.1.1_140911-5A\agilent\bin\Debug\agilent.pdb
+D:\Git\MTestSystem\AutoWelding2.0.1.1_140911-5A\agilent\obj\Debug\agilent.dll
+D:\Git\MTestSystem\AutoWelding2.0.1.1_140911-5A\agilent\obj\Debug\agilent.pdb
+D:\Git\MTestSystem\AutoWelding2.0.1.1_140911-5A\agilent\bin\Debug\Ivi.Visa.Interop.dll
+D:\Git\MTestSystem\AutoWelding2.0.1.1_140911-5A\agilent\bin\Debug\Ivi.Visa.Interop.xml
+D:\Git\MTestSystem\AutoWelding2.0.1.1_140911-5A\agilent\obj\Debug\agilent.csprojResolveAssemblyReference.cache

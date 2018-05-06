@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="AutoWelding">
+</Property><Property Name="解决方案文件" Value="E:\AutoWelding\AutoWelding.sln">
+</Property><Property Name="用户选项文件" Value="E:\AutoWelding\AutoWelding.suo">
+</Property><Property Name="Date" Value="2013年1月15日">
+</Property><Property Name="Time" Value="0:20">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="AutoWelding.sln" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding.sln">
+</Event><Event ErrorLevel="0" Project="" Source="AutoWelding.suo" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding.suo">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\AutoWelding.csproj" Description="项目文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\AutoWelding.csproj">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\AutoWelding.csproj.user" Description="项目用户文件成功备份为 E:\AutoWelding\Backup\AutoWelding\AutoWelding.csproj.user">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\AdjustColloid.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\AdjustColloid.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\AdjustColloid.Designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\AdjustColloid.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\awdatabase\AwDbFactory.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\awdatabase\AwDbFactory.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\awdatabase\AwDbInterface.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\awdatabase\AwDbInterface.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\awdatabase\AwDbXml.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\awdatabase\AwDbXml.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\awdatabase\AwExcel.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\awdatabase\AwExcel.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\ControlLog.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\ControlLog.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\ControlLog.Designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\ControlLog.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\control\MotorInfo.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\control\MotorInfo.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\control\ProductParameter.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\control\ProductParameter.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\debug\Debuglog.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\debug\Debuglog.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\engine\crypt.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\engine\crypt.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\engine\Registry.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\engine\Registry.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\engine\systeminfo.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\engine\systeminfo.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Form1.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Form1.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Form1.Designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormAbout.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormAbout.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormAbout.Designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormAbout.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormIoControl.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormIoControl.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormIoControl.Designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormIoControl.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormNewProductBat.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormNewProductBat.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormNewProductBat.Designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormNewProductBat.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormParameter.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormParameter.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormParameter.Designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormParameter.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormPwdSetup.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormPwdSetup.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormPwdSetup.Designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormPwdSetup.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormTest.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormTest.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormTest.designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormTest.designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormTraceSetup.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormTraceSetup.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormTraceSetup.Designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormTraceSetup.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Login.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Login.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Login.Designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Login.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\ProductData.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\ProductData.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Register.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Register.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Register.Designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Register.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\uicontrol\AwIoOutputButton.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\uicontrol\AwIoOutputButton.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\uicontrol\AwIoStatus.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\uicontrol\AwIoStatus.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\uicontrol\AwPanel.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\uicontrol\AwPanel.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\test\MainWindow.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\test\MainWindow.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\test\MainWindow.Designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\test\MainWindow.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Program.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Program.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Properties\AssemblyInfo.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Properties\Resources.Designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Properties\Settings.Designer.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\system\systemParam.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\system\systemParam.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\TraceSetup.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\TraceSetup.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\uicontrol\AwPicBox.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\uicontrol\AwPicBox.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\WeldingControl.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\WeldingControl.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Win32Api.cs" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Win32Api.cs">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Properties\Settings.settings" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\pictures\waitstart.JPG" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\pictures\waitstart.JPG">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\pictures\BakeColloid.JPG" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\pictures\BakeColloid.JPG">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\pictures\ClampChip.JPG" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\pictures\ClampChip.JPG">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\pictures\FindVpp.JPG" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\pictures\FindVpp.JPG">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\pictures\ReleaseChip.JPG" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\pictures\ReleaseChip.JPG">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\pictures\ReleaseColloid.JPG" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\pictures\ReleaseColloid.JPG">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\pictures\ToAbsolutionPoint.JPG" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\pictures\ToAbsolutionPoint.JPG">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\pictures\Toworkplatform.JPG" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\pictures\Toworkplatform.JPG">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\pictures\SystemInit.JPG" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\pictures\SystemInit.JPG">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\pictures\SystemInitDone.JPG" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\pictures\SystemInitDone.JPG">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\AutoWeldingIcon.ico" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\AutoWeldingIcon.ico">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\AdjustColloid.resx" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\AdjustColloid.resx">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\ControlLog.resx" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\ControlLog.resx">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Form1.resx" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Form1.resx">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormAbout.resx" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormAbout.resx">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormIoControl.resx" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormIoControl.resx">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormNewProductBat.resx" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormNewProductBat.resx">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormParameter.resx" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormParameter.resx">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormPwdSetup.resx" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormPwdSetup.resx">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormTest.resx" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormTest.resx">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\FormTraceSetup.resx" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\FormTraceSetup.resx">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Login.resx" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Login.resx">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Register.resx" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Register.resx">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\test\MainWindow.resx" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\test\MainWindow.resx">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\Properties\Resources.resx" Description="文件已成功备份为 E:\AutoWelding\Backup\AutoWelding\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\AutoWelding.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="AutoWelding" Source="AutoWelding\AutoWelding.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="AutoWelding.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="AutoWelding.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="AutoWelding" Source="AutoWelding\AutoWelding.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

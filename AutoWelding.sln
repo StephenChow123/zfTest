@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoWelding", "AutoWelding\AutoWelding.csproj", "{4186F281-A4CA-46CC-944F-620B1DDF9E9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "agilent", "agilent\agilent.csproj", "{F05E30A6-CD10-4705-93F4-78C58EED1FC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4186F281-A4CA-46CC-944F-620B1DDF9E9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4186F281-A4CA-46CC-944F-620B1DDF9E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4186F281-A4CA-46CC-944F-620B1DDF9E9A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4186F281-A4CA-46CC-944F-620B1DDF9E9A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4186F281-A4CA-46CC-944F-620B1DDF9E9A}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{4186F281-A4CA-46CC-944F-620B1DDF9E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4186F281-A4CA-46CC-944F-620B1DDF9E9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4186F281-A4CA-46CC-944F-620B1DDF9E9A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4186F281-A4CA-46CC-944F-620B1DDF9E9A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4186F281-A4CA-46CC-944F-620B1DDF9E9A}.Release|Win32.ActiveCfg = Release|Any CPU
+		{F05E30A6-CD10-4705-93F4-78C58EED1FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F05E30A6-CD10-4705-93F4-78C58EED1FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F05E30A6-CD10-4705-93F4-78C58EED1FC4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F05E30A6-CD10-4705-93F4-78C58EED1FC4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F05E30A6-CD10-4705-93F4-78C58EED1FC4}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{F05E30A6-CD10-4705-93F4-78C58EED1FC4}.Debug|Win32.Build.0 = Debug|Any CPU
+		{F05E30A6-CD10-4705-93F4-78C58EED1FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F05E30A6-CD10-4705-93F4-78C58EED1FC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F05E30A6-CD10-4705-93F4-78C58EED1FC4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F05E30A6-CD10-4705-93F4-78C58EED1FC4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F05E30A6-CD10-4705-93F4-78C58EED1FC4}.Release|Win32.ActiveCfg = Release|Any CPU
+		{F05E30A6-CD10-4705-93F4-78C58EED1FC4}.Release|Win32.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AutoWelding\\AutoWelding.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = AutoWelding\\
+		SccProjectUniqueName2 = agilent\\agilent.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = agilent\\
+	EndGlobalSection
+EndGlobal

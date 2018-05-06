@@ -1,0 +1,8 @@
+1. FNSR, ToCan 是否需要添加权限
+2. 是否还要更换胶水的按键
+
+
+		float *downArray = new float[1];
+	downArray[0] = 0;
+	PostMsgToAdControlThread(ADJUST_VAL_OUTPUT,(LPARAM)downArray);
+	processControl.SendMsgToAdControlThread(ADJUST_VAL_OUTPUT_Sync,)

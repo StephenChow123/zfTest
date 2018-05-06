@@ -1,0 +1,190 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.IO.Ports;
+using System.Diagnostics;
+
+namespace AutoWelding
+{
+ public   class TC6200P
+    {
+        SerialPort comBoard;
+        List<byte> buffer = new List<byte>(4096);
+        StringBuilder builder = new StringBuilder();
+        Stopwatch swNow = new Stopwatch();
+        String dataString = null;
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="_iNum"></param>
+        public TC6200P(int _iNum)
+        {
+            string strCom = "com" + _iNum.ToString();
+            comBoard = new SerialPort(strCom);
+            comBoard.BaudRate = 9600;
+            comBoard.DataBits = 8; //数据位
+            comBoard.Parity = 0; //奇偶校验
+            comBoard.StopBits = StopBits.One;//停止位
+            comBoard.ReadTimeout = 1000; //读超时 
+        }
+        public bool getString(ref string data)
+        {
+            data = null;
+            Stopwatch swNow = new Stopwatch();
+            swNow.Restart();
+            DateTime dt = DateTime.Now;
+            while (true)
+            {
+                if (swNow.ElapsedMilliseconds > 200)
+                {
+                    buffer = new List<byte>(4096);
+                    return false;
+                }
+                int nn = comBoard.BytesToRead;
+                byte[] buf = new byte[nn];
+                if (nn < 2) continue;
+                comBoard.Read(buf, 0, nn);//读取缓冲数据
+                buffer.AddRange(buf);
+                #region 读取数据
+                if (buffer[buffer.Count - 2] == 0x0D && buffer[buffer.Count - 1] == 0x0A)//0x0A="/n"
+                {
+                    byte[] bufOut = new byte[buffer.Count];
+                    for (int i = 0; i < buffer.Count; i++)
+                    {
+                        bufOut[i] = buffer[i];
+                    }
+                    data = builder.Append(Encoding.ASCII.GetString(bufOut)).ToString();
+                    data = data.Replace("\r\n", "\n");
+                    string[] get = data.Split('\n');
+                    if (get.Length >= 2)
+                    {
+                        data = get[get.Length - 2];
+                    }
+                    else
+                    {
+                        data = get[0];
+                    }
+                    buffer = new List<byte>(4096);
+                    builder.Clear();
+                    return true;
+                }
+                #endregion
+            }
+        }
+        public bool Handshake()
+        {
+            comBoard.WriteLine("*OPC?");
+            return true;
+        }
+       public bool SetVolt(float _vlot)
+        {
+            string strSend = "SOUR:VOLT" + _vlot.ToString("0.00");
+            comBoard.WriteLine(strSend);
+            return true;
+        }
+        public bool SetVoltLimHight(float H_Volot)
+        {
+            string strSend = "SOUR:VOLT:LIMIT:HIGH" + H_Volot.ToString("0.00");
+            comBoard.WriteLine(strSend);
+            return true;
+        }
+        public bool SetVoltLimLow(float L_Volot)
+        {
+            string strSend = "SOUR:VOLT:LIMIT:LOW" + L_Volot.ToString("0.00");
+            comBoard.WriteLine(strSend);
+            return true;
+        }
+        public   bool SetCurrLimH(float _Curr)
+        {
+            string strSend = "SOUR:CURR:LIMIT:HIGH" + _Curr.ToString("0.00");
+            comBoard.WriteLine(strSend);
+            return true;
+        }
+        public bool SetCurrLimL(float _Curr)
+        {
+            string strSend = "SOUR:CURR:LIMIT:LOW" + _Curr.ToString("0.00");
+            comBoard.WriteLine(strSend);
+            return true;
+        }
+        public bool SetOn()
+        {
+            string strSend = "CONFigure:OUTPut ON";
+            comBoard.WriteLine(strSend);
+            return true;
+        }
+        public bool SetOff()
+        {
+            string strSend = "CONFigure:OUTPut OFF";
+            comBoard.WriteLine(strSend);
+            return true;
+        }
+        public bool Cls()
+        {
+            string strSend = "*CLS";
+            comBoard.WriteLine(strSend);
+            return true;
+        }
+    }
+    public class ComBoard
+    {
+        SerialPort comBoard;
+        public enum emType
+        {
+            Vgs=0,
+            Vds=1,
+            Vgd=2,
+        }
+        public ComBoard(int iCom)
+        {
+            string strCom = "com" + iCom.ToString();
+            comBoard = new SerialPort(strCom);
+            comBoard.BaudRate = 9600;
+            comBoard.DataBits = 8; //数据位
+            comBoard.Parity = 0; //奇偶校验
+            comBoard.StopBits = StopBits.One;//停止位
+            comBoard.ReadTimeout = 1000; //读超时 
+            comBoard.DataReceived += new SerialDataReceivedEventHandler(CommDataReceived);
+        }
+        public void CommDataReceived(Object sender, SerialDataReceivedEventArgs e)
+        {
+            try
+            {
+                //Comm.BytesToRead中为要读入的字节长度
+                int len = comBoard.BytesToRead;
+                byte[] readBuffer = new Byte[len];
+                comBoard.Read(readBuffer, 0, len); //将数据读入缓存
+                //处理readBuffer中的数据，自定义处理过程
+                //string msg = encoding.GetString(readBuffer, 0, len); //获取出入库产品编号
+                //DialogForm.Show("接收到的信息", msg);
+            }
+            catch (Exception ex)
+            {
+               
+            }
+        }
+        /// <summary>
+        /// 产品类型切换
+        /// </summary>
+        public bool SelectType(emType type)
+        {
+            byte[] sendByte = new byte[10];
+            switch (type)
+            {
+                case emType.Vgs:
+                    sendByte = new byte[2] { 0x01, 0x02 };
+                    break;
+                case emType.Vds:
+                    break;
+                case emType.Vgd:
+                    break;
+                default:
+                    break;
+            }
+            comBoard.Write(sendByte, 0, sendByte.Length);
+            return true;
+        }
+    }
+
+}
