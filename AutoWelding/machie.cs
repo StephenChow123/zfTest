@@ -9,7 +9,7 @@ namespace AutoWelding
 {
  public   class TC6200P
     {
-        SerialPort comBoard;
+        public  SerialPort comBoard;
         List<byte> buffer = new List<byte>(4096);
         StringBuilder builder = new StringBuilder();
         Stopwatch swNow = new Stopwatch();
@@ -19,9 +19,8 @@ namespace AutoWelding
         /// 构造函数
         /// </summary>
         /// <param name="_iNum"></param>
-        public TC6200P(int _iNum)
+        public TC6200P(string strCom)
         {
-            string strCom = "com" + _iNum.ToString();
             comBoard = new SerialPort(strCom);
             comBoard.BaudRate = 9600;
             comBoard.DataBits = 8; //数据位
@@ -73,10 +72,26 @@ namespace AutoWelding
                 #endregion
             }
         }
+        public bool IsHandshaked;
         public bool Handshake()
         {
-            comBoard.WriteLine("*OPC?");
-            return true;
+            try
+            {
+                IsHandshaked = false;
+                comBoard.Open();
+                comBoard.WriteLine("*OPC?");
+                string strReturn = "";
+                if (getString(ref strReturn))
+                {
+                    IsHandshaked = true;
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
        public bool SetVolt(float _vlot)
         {
@@ -129,16 +144,15 @@ namespace AutoWelding
     }
     public class ComBoard
     {
-        SerialPort comBoard;
+        public SerialPort comBoard;
         public enum emType
         {
             Vgs=0,
             Vds=1,
             Vgd=2,
         }
-        public ComBoard(int iCom)
+        public ComBoard(string strCom)
         {
-            string strCom = "com" + iCom.ToString();
             comBoard = new SerialPort(strCom);
             comBoard.BaudRate = 9600;
             comBoard.DataBits = 8; //数据位
@@ -147,13 +161,18 @@ namespace AutoWelding
             comBoard.ReadTimeout = 1000; //读超时 
             comBoard.DataReceived += new SerialDataReceivedEventHandler(CommDataReceived);
         }
+        /// <summary>
+        /// 串口接收，新线程
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void CommDataReceived(Object sender, SerialDataReceivedEventArgs e)
         {
             try
             {
                 //Comm.BytesToRead中为要读入的字节长度
                 int len = comBoard.BytesToRead;
-                byte[] readBuffer = new Byte[len];
+                byte[] readBuffer = new byte[len];
                 comBoard.Read(readBuffer, 0, len); //将数据读入缓存
                 //处理readBuffer中的数据，自定义处理过程
                 //string msg = encoding.GetString(readBuffer, 0, len); //获取出入库产品编号
@@ -185,6 +204,23 @@ namespace AutoWelding
             comBoard.Write(sendByte, 0, sendByte.Length);
             return true;
         }
-    }
+        public bool IsHandshaked;
+        public bool Handshake()
+        {
+            try
+            {
+                IsHandshaked = false;
+                comBoard.Open();
+                IsHandshaked = true;
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            
+            
+        }
+}
 
 }

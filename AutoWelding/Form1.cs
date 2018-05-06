@@ -213,7 +213,11 @@ namespace AutoWelding
             // ∂¡»°
             productParameter = ProductParameter.GetInstance();
             couplingRetData = new CouplingRetData();
-
+            string strCom1="com1", strCom2="com2";
+            openSave.RegistryOp.GetValue("com_TC6200P", ref strCom1);
+            openSave.RegistryOp.GetValue("com_ComBoard", ref strCom2);
+            mcTC6200P = new TC6200P(strCom1);
+            mcComBoard = new ComBoard(strCom2);
             InitializeComponent();
             sysParam = SystemParam.GetInstance();
             excelDataList = new List<ExcelDataUnit>();
@@ -444,7 +448,7 @@ namespace AutoWelding
                 ChangeTheProcessOrder();
             }
 
-            CreateNewProductBat();
+            //CreateNewProductBat();
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             Visible = false;
