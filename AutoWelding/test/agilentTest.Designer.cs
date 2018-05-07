@@ -42,11 +42,10 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btmCom = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.switch1 = new NationalInstruments.UI.WindowsForms.Switch();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -65,7 +64,9 @@
             this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btmHV = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.led1)).BeginInit();
@@ -74,6 +75,7 @@
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -165,12 +167,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.groupBox7);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.led1);
-            this.groupBox2.Controls.Add(this.button12);
-            this.groupBox2.Controls.Add(this.button11);
-            this.groupBox2.Controls.Add(this.button10);
-            this.groupBox2.Controls.Add(this.button9);
+            this.groupBox2.Controls.Add(this.btmCom);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Location = new System.Drawing.Point(420, 12);
@@ -199,7 +199,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(213, 104);
+            this.button12.Location = new System.Drawing.Point(200, 17);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(76, 39);
             this.button12.TabIndex = 9;
@@ -209,7 +209,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(113, 104);
+            this.button11.Location = new System.Drawing.Point(100, 17);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(76, 39);
             this.button11.TabIndex = 8;
@@ -219,7 +219,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(18, 104);
+            this.button10.Location = new System.Drawing.Point(5, 17);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(76, 39);
             this.button10.TabIndex = 7;
@@ -227,15 +227,15 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button9
+            // btmCom
             // 
-            this.button9.Location = new System.Drawing.Point(113, 22);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(76, 39);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "握手";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.btmCom.Location = new System.Drawing.Point(113, 30);
+            this.btmCom.Name = "btmCom";
+            this.btmCom.Size = new System.Drawing.Size(76, 39);
+            this.btmCom.TabIndex = 6;
+            this.btmCom.Text = "握手";
+            this.btmCom.UseVisualStyleBackColor = true;
+            this.btmCom.Click += new System.EventHandler(this.button9_Click);
             // 
             // label2
             // 
@@ -248,6 +248,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(18, 40);
             this.comboBox1.Name = "comboBox1";
@@ -256,14 +257,12 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.switch1);
             this.groupBox3.Controls.Add(this.groupBox6);
             this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.comboBox2);
-            this.groupBox3.Controls.Add(this.button6);
+            this.groupBox3.Controls.Add(this.btmHV);
             this.groupBox3.Location = new System.Drawing.Point(12, 345);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(759, 227);
@@ -271,31 +270,25 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "高压";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(438, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 12);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "设备输出";
-            // 
             // switch1
             // 
-            this.switch1.Location = new System.Drawing.Point(438, 20);
+            this.switch1.Location = new System.Drawing.Point(230, 0);
             this.switch1.Name = "switch1";
-            this.switch1.Size = new System.Drawing.Size(64, 96);
+            this.switch1.Size = new System.Drawing.Size(64, 94);
             this.switch1.SwitchStyle = NationalInstruments.UI.SwitchStyle.VerticalToggle3D;
             this.switch1.TabIndex = 8;
             this.switch1.StateChanged += new NationalInstruments.UI.ActionEventHandler(this.switch1_StateChanged);
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.label8);
             this.groupBox6.Controls.Add(this.textBox7);
+            this.groupBox6.Controls.Add(this.switch1);
             this.groupBox6.Controls.Add(this.button13);
-            this.groupBox6.Location = new System.Drawing.Point(210, 20);
+            this.groupBox6.Enabled = false;
+            this.groupBox6.Location = new System.Drawing.Point(248, 20);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(215, 92);
+            this.groupBox6.Size = new System.Drawing.Size(349, 92);
             this.groupBox6.TabIndex = 7;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "输出电压（V）";
@@ -324,6 +317,7 @@
             this.groupBox5.Controls.Add(this.textBox4);
             this.groupBox5.Controls.Add(this.textBox5);
             this.groupBox5.Controls.Add(this.button8);
+            this.groupBox5.Enabled = false;
             this.groupBox5.Location = new System.Drawing.Point(311, 120);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(286, 92);
@@ -380,6 +374,7 @@
             this.groupBox4.Controls.Add(this.textBox3);
             this.groupBox4.Controls.Add(this.textBox2);
             this.groupBox4.Controls.Add(this.button7);
+            this.groupBox4.Enabled = false;
             this.groupBox4.Location = new System.Drawing.Point(13, 120);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(286, 92);
@@ -440,21 +435,43 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(11, 60);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(67, 20);
             this.comboBox2.TabIndex = 3;
             // 
-            // button6
+            // btmHV
             // 
-            this.button6.Location = new System.Drawing.Point(100, 50);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(76, 39);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "握手";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btmHV.Location = new System.Drawing.Point(100, 50);
+            this.btmHV.Name = "btmHV";
+            this.btmHV.Size = new System.Drawing.Size(76, 39);
+            this.btmHV.TabIndex = 0;
+            this.btmHV.Text = "握手";
+            this.btmHV.UseVisualStyleBackColor = true;
+            this.btmHV.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.button12);
+            this.groupBox7.Controls.Add(this.button11);
+            this.groupBox7.Controls.Add(this.button10);
+            this.groupBox7.Enabled = false;
+            this.groupBox7.Location = new System.Drawing.Point(13, 87);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(318, 68);
+            this.groupBox7.TabIndex = 13;
+            this.groupBox7.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(241, 17);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "设备输出";
             // 
             // agilentTest
             // 
@@ -482,6 +499,7 @@
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -499,18 +517,17 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btmHV;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btmCom;
         private System.Windows.Forms.Label label3;
         private NationalInstruments.UI.WindowsForms.Led led1;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Label label8;
         private NationalInstruments.UI.WindowsForms.Switch switch1;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox textBox7;
@@ -526,5 +543,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label label8;
     }
 }

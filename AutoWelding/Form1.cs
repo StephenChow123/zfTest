@@ -178,7 +178,7 @@ namespace AutoWelding
 
         //FormTest formTest;
 
-        agilentTest fmMachine=null;
+        //agilentTest fmMachine=null;
 
         public static TC6200P mcTC6200P;
         public static ComBoard mcComBoard;
@@ -984,10 +984,7 @@ namespace AutoWelding
 
         private void buttonClamp_Click(object sender, EventArgs e)
         {
-            if(fmMachine==null)
-            {
-                fmMachine = new agilentTest();
-            }
+            agilentTest fmMachine = new agilentTest();
             fmMachine.ShowDialog();
         }
 

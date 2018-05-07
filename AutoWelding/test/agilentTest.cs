@@ -50,10 +50,12 @@ namespace AutoWelding.test
             string[] ports = SerialPort.GetPortNames();
             if (AutoWelding.mcTC6200P.IsHandshaked)
             {
-                comboBox2.Enabled = false;
                 comboBox2.Items.Add(AutoWelding.mcTC6200P.comBoard.PortName);
-                comboBox2.SelectedItem = 0;
-                button6.Text = "连接成功";
+                comboBox2.SelectedItem = comboBox2.Items[0];
+                btmHV.Text = "连接成功";
+                groupBox4.Enabled = true;
+                groupBox5.Enabled = true;
+                groupBox6.Enabled = true;
             }
             else
             {
@@ -66,20 +68,22 @@ namespace AutoWelding.test
                         sp.Close();
                         ///可否自动握手？
                         comboBox2.Items.Add(ports[i]);
-                        comboBox2.SelectedItem = 0;
                     }
                     catch (Exception)
                     {
 
                     }
                 }
+                if(comboBox2.Items.Count>0)
+                comboBox2.SelectedItem = comboBox2.Items[0];
             }
             if (AutoWelding.mcComBoard.IsHandshaked)
             {
                 comboBox1.Enabled = false;
                 comboBox1.Items.Add(AutoWelding.mcComBoard.comBoard.PortName);
-                comboBox1.SelectedItem = 0;
-                button9.Text = "连接成功";
+                comboBox1.SelectedItem = comboBox1.Items[0];
+                btmCom.Text = "连接成功";
+                groupBox7.Enabled = true;
             }
           else
             {
@@ -91,26 +95,52 @@ namespace AutoWelding.test
                         sp.Open();
                         sp.Close();
                         comboBox1.Items.Add(ports[i]);
-                        comboBox2.SelectedItem = comboBox2.Items.Count-1;
                     }
                     catch (Exception)
                     {
 
                     }
                 }
+                if(comboBox1.Items.Count>1)
+                {
+                    comboBox1.SelectedItem = comboBox1.Items[comboBox1.Items.Count - 1];
+                }
             }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            AutoWelding.mcTC6200P = new TC6200P(comboBox2.Text);
-            button6.Text = AutoWelding.mcTC6200P.Handshake() ? "连接成功" : "连接失败";
+            bool IsShaked = false;
+            try
+            {
+                AutoWelding.mcTC6200P.changeCom(comboBox2.Text);
+                 IsShaked = AutoWelding.mcTC6200P.Handshake();
+            }
+            catch (Exception)
+            {
+
+            }
+
+            btmHV.Text = IsShaked ? "连接成功" : "连接失败";
+            groupBox4.Enabled = IsShaked;
+            groupBox5.Enabled = IsShaked;
+            groupBox6.Enabled = IsShaked;
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            AutoWelding.mcComBoard = new ComBoard(comboBox1.Text);
-            button9.Text =  AutoWelding.mcComBoard.Handshake() ? "连接成功" : "连接失败";
+            bool IsShaked = false; ;
+            try
+            {
+                AutoWelding.mcComBoard.changeCom(comboBox1.Text)  ;
+                 IsShaked = AutoWelding.mcComBoard.Handshake();
+            }
+            catch (Exception)
+            {
+
+            }
+            btmCom.Text = IsShaked ? "连接成功" : "连接失败";
+            groupBox7.Enabled = IsShaked;
         }
 
         private void switch1_StateChanged(object sender, NationalInstruments.UI.ActionEventArgs e)
@@ -185,6 +215,10 @@ namespace AutoWelding.test
         private void button12_Click(object sender, EventArgs e)
         {
             AutoWelding.mcComBoard.SelectType(ComBoard.emType.Vgs);
+        }
+        void mcComBoardShaked()
+        {
+            
         }
     }
  }

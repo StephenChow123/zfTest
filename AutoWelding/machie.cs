@@ -86,6 +86,7 @@ namespace AutoWelding
                     IsHandshaked = true;
                     return true;
                 }
+                comBoard.Close();
                 return false;
             }
             catch (Exception)
@@ -93,7 +94,12 @@ namespace AutoWelding
                 return false;
             }
         }
-       public bool SetVolt(float _vlot)
+        public void changeCom(string strCom)
+        {
+            if (comBoard.IsOpen) comBoard.Close();
+            comBoard.PortName = strCom;
+        }
+        public bool SetVolt(float _vlot)
         {
             string strSend = "SOUR:VOLT" + _vlot.ToString("0.00");
             comBoard.WriteLine(strSend);
@@ -160,6 +166,11 @@ namespace AutoWelding
             comBoard.StopBits = StopBits.One;//停止位
             comBoard.ReadTimeout = 1000; //读超时 
             comBoard.DataReceived += new SerialDataReceivedEventHandler(CommDataReceived);
+        }
+        public void changeCom(string strCom)
+        {
+            if (comBoard.IsOpen) comBoard.Close();
+            comBoard.PortName = strCom;
         }
         /// <summary>
         /// 串口接收，新线程
