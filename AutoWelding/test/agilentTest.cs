@@ -112,6 +112,65 @@ namespace AutoWelding.test
             AutoWelding.mcComBoard = new ComBoard(comboBox1.Text);
             button9.Text =  AutoWelding.mcComBoard.Handshake() ? "连接成功" : "连接失败";
         }
+
+        private void switch1_StateChanged(object sender, NationalInstruments.UI.ActionEventArgs e)
+        {
+            if(switch1.Value)
+            {
+                AutoWelding.mcTC6200P.SetOn();
+            }
+            else
+            {
+                AutoWelding.mcTC6200P.SetOff();
+            }
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                float vOut = (float)Convert.ToDouble(textBox7.Text);
+                AutoWelding.mcTC6200P.SetVolt(vOut);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                float vMax = (float)Convert.ToDouble(textBox2.Text);
+                float vMin = (float)Convert.ToDouble(textBox3.Text);
+                AutoWelding.mcTC6200P.SetVoltLimHight(vMax);
+                AutoWelding.mcTC6200P.SetVoltLimLow(vMin);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                float vMax = (float)Convert.ToDouble(textBox4.Text);
+                float vMin = (float)Convert.ToDouble(textBox5.Text);
+                AutoWelding.mcTC6200P.SetCurrLimH(vMax);
+                AutoWelding.mcTC6200P.SetCurrLimL(vMin);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+    }
  }
 

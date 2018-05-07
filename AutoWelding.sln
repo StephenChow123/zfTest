@@ -43,14 +43,4 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(SourceCodeControl) = preSolution
-		SccNumberOfProjects = 3
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = AutoWelding\\AutoWelding.csproj
-		SccLocalPath1 = .
-		SccProjectFilePathRelativizedFromConnection1 = AutoWelding\\
-		SccProjectUniqueName2 = agilent\\agilent.csproj
-		SccLocalPath2 = .
-		SccProjectFilePathRelativizedFromConnection2 = agilent\\
-	EndGlobalSection
 EndGlobal

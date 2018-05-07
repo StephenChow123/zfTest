@@ -1,1 +1,3 @@
+NationalInstruments.UI.WindowsForms.Switch, NationalInstruments.UI.WindowsForms, Version=9.1.40.204, Culture=neutral, PublicKeyToken=dc6ad606294fc298
 NationalInstruments.UI.WindowsForms.ScatterGraph, NationalInstruments.UI.WindowsForms, Version=9.1.40.204, Culture=neutral, PublicKeyToken=dc6ad606294fc298
+NationalInstruments.UI.WindowsForms.Led, NationalInstruments.UI.WindowsForms, Version=9.1.40.204, Culture=neutral, PublicKeyToken=dc6ad606294fc298
