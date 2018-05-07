@@ -171,6 +171,21 @@ namespace AutoWelding.test
                 throw;
             }
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            AutoWelding.mcComBoard.SelectType(ComBoard.emType.Vgd);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            AutoWelding.mcComBoard.SelectType(ComBoard.emType.Vds);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            AutoWelding.mcComBoard.SelectType(ComBoard.emType.Vgs);
+        }
     }
  }
 
