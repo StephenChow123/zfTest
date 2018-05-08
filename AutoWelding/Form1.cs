@@ -225,6 +225,7 @@ namespace AutoWelding
             excelMutex = new Mutex();
             menuButtonList = new List<Button>();
             System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = true;
+            //sysParam.ControlFrameColor = SystemColors.ButtonFace;
             fmTest();
 
         }
@@ -548,7 +549,7 @@ namespace AutoWelding
 
             statisticsPanel.BorderColor = sysParam.ControlFrameColor;
             statisticsPanel.BorderWidth = 3;
-            statisticsPanel.Width = (int)(349f*xRate);
+            statisticsPanel.Width = (int)(390f*xRate);
             statisticsPanel.Height = imagePanel.Height; 
             statisticsPanel.Parent = this;
             statisticsPanel.TitleBackground.Height = 30;
@@ -686,12 +687,12 @@ namespace AutoWelding
                     float oldSize = ctr.Font.Size;
                     if (ctr is Label)
                     {
-                        Font lFont = new Font("华文楷体", (float)disRate * oldSize, FontStyle.Regular);
+                        Font lFont = new Font("华文楷体", (float)disRate * oldSize, FontStyle.Bold);
                         ctr.Font = lFont;
                     }
                     else
                     {
-                        Font lFont = new Font("宋体", (float)disRate * oldSize, FontStyle.Regular);
+                        Font lFont = new Font("宋体", (float)disRate * oldSize, FontStyle.Bold);
                         ctr.Font = lFont;
                     }
                    
@@ -706,12 +707,12 @@ namespace AutoWelding
             Point point = new Point();
             statusAwPanel = new AwPanel();
             point.X = panelSysTitleBackgroud.Location.X+10; 
-            point.Y = (int)(panelSysTitleBackgroud.Height +2);
+            point.Y = (int)(panelSysTitleBackgroud.Height +10);
             statusAwPanel.Location = point;
 
             statusAwPanel.BorderColor = sysParam.ControlFrameColor;
             statusAwPanel.BorderWidth = 3;
-            statusAwPanel.Width = (int)(NewPixel_X-40);
+            statusAwPanel.Width = (int)(NewPixel_X-20);
             statusAwPanel.Height =(int)( 160*yRate);//184@1440x900
             statusAwPanel.Parent = this;
             statusAwPanel.TitleBackground.Height = 30;
@@ -723,7 +724,7 @@ namespace AutoWelding
 
             statusAwPanel.Title.Text = "当前状态";
 
-            panelStatus.Width = statusAwPanel.Width - 40;
+            panelStatus.Width = statusAwPanel.Width - 20;
             panelStatus.Height = statusAwPanel.Height - statusAwPanel.TitleBackground.Height - 20;
             panelStatus.Parent = statusAwPanel;
             point.X = statusAwPanel.Location.X;
@@ -800,7 +801,7 @@ namespace AutoWelding
             cmdPanel.Location = point;
             cmdPanel.BorderColor = sysParam.ControlFrameColor;
             cmdPanel.BorderWidth = 2;
-            cmdPanel.Width = (int)(240 * yRate);
+            cmdPanel.Width = (int)(205 * yRate);
             cmdPanel.Height = statisticsPanel.Location.Y + statisticsPanel.Height - cmdPanel.Location.Y;
             cmdPanel.Parent = this;
             cmdPanel.TitleBackground.Height = 30;

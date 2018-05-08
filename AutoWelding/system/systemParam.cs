@@ -66,8 +66,8 @@ namespace AutoWelding.system
 
         // UI Colors
         Color sysBackgroundColor = Color.FromArgb(150, 216, 228, 248);
-        Color controlBackgroundColor = Color.FromArgb(255, 171, 205, 230);//Color.FromArgb(255, 199, 192, 155);
-        Color controlFrameColor = Color.FromArgb(255, 171, 205, 230);//Color.FromArgb(255, 203, 191, 125);
+        Color controlBackgroundColor = Color.FromArgb(255, 132, 182, 219);//Color.FromArgb(255, 199, 192, 155); Color.FromArgb(255, 171, 205, 230)
+        Color controlFrameColor = Color.FromArgb(255, 171, 205, 230);//Color.FromArgb(255, 203, 191, 125); Color.FromArgb(255, 171, 205, 230)
         Color processBackgroundColor = Color.FromArgb(255, 7, 142, 0);
         // version
         const string version = "◊€∫œ≤‚ ‘œµÕ≥ 2.0.1.1 2014-9-10";

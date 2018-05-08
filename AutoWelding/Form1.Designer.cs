@@ -49,6 +49,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelInerStatistics = new System.Windows.Forms.Panel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label40 = new System.Windows.Forms.Label();
@@ -129,6 +130,7 @@
             this.panelStatistics.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelInerStatistics.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -250,11 +252,12 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("宋体", 12F);
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label14.Location = new System.Drawing.Point(112, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(88, 32);
+            this.label14.Size = new System.Drawing.Size(120, 68);
             this.label14.TabIndex = 0;
             this.label14.Text = "Test equipment:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,11 +265,12 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("宋体", 12F);
-            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label13.Location = new System.Drawing.Point(4, 22);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 16);
+            this.label13.Size = new System.Drawing.Size(52, 20);
             this.label13.TabIndex = 1;
             this.label13.Text = "Level";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -274,11 +278,12 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("宋体", 12F);
-            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label16.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label16.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label16.Location = new System.Drawing.Point(4, 1);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(48, 20);
+            this.label16.Size = new System.Drawing.Size(52, 20);
             this.label16.TabIndex = 0;
             this.label16.Text = "Function";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,6 +299,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(208)))), ((int)(((byte)(247)))));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.83799F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.16201F));
@@ -322,6 +328,7 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel11, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -332,6 +339,20 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(229, 548);
             this.tableLayoutPanel9.TabIndex = 15;
+            // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.ColumnCount = 1;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 2;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(70, 131);
+            this.tableLayoutPanel11.TabIndex = 0;
             // 
             // panel2
             // 
@@ -502,11 +523,12 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("宋体", 12F);
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label9.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label9.Location = new System.Drawing.Point(4, 43);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 16);
+            this.label9.Size = new System.Drawing.Size(52, 21);
             this.label9.TabIndex = 2;
             this.label9.Text = "Freq.";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -563,6 +585,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(208)))), ((int)(((byte)(247)))));
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("隶书", 15.75F);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -578,7 +601,7 @@
             this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel3.Controls.Add(this.comboBox3, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.comboBox2, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label20, 0, 2);
@@ -601,7 +624,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "COM2"});
-            this.comboBox3.Location = new System.Drawing.Point(70, 46);
+            this.comboBox3.Location = new System.Drawing.Point(63, 46);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(91, 20);
             this.comboBox3.TabIndex = 28;
@@ -611,7 +634,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "COM1"});
-            this.comboBox2.Location = new System.Drawing.Point(70, 25);
+            this.comboBox2.Location = new System.Drawing.Point(63, 25);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(91, 20);
             this.comboBox2.TabIndex = 27;
@@ -624,7 +647,7 @@
             this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label20.Location = new System.Drawing.Point(4, 43);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(59, 21);
+            this.label20.Size = new System.Drawing.Size(52, 21);
             this.label20.TabIndex = 25;
             this.label20.Text = "高压系统";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -637,7 +660,7 @@
             this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label19.Location = new System.Drawing.Point(4, 22);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(59, 20);
+            this.label19.Size = new System.Drawing.Size(52, 20);
             this.label19.TabIndex = 24;
             this.label19.Text = "测试系统";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -650,7 +673,7 @@
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label11.Location = new System.Drawing.Point(4, 1);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 20);
+            this.label11.Size = new System.Drawing.Size(52, 20);
             this.label11.TabIndex = 23;
             this.label11.Text = "LRC系统";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -658,7 +681,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(70, 4);
+            this.comboBox1.Location = new System.Drawing.Point(63, 4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(91, 20);
             this.comboBox1.TabIndex = 26;
@@ -708,11 +731,12 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("宋体", 12F);
-            this.label27.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label27.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label27.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label27.Location = new System.Drawing.Point(63, 43);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(32, 16);
+            this.label27.Size = new System.Drawing.Size(52, 21);
             this.label27.TabIndex = 28;
             this.label27.Text = "123";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -732,11 +756,12 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("宋体", 12F);
-            this.label23.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label23.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label23.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label23.Location = new System.Drawing.Point(63, 1);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(32, 16);
+            this.label23.Size = new System.Drawing.Size(52, 20);
             this.label23.TabIndex = 25;
             this.label23.Text = "123";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -792,11 +817,12 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("宋体", 12F);
-            this.label26.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label26.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label26.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label26.Location = new System.Drawing.Point(63, 22);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(32, 16);
+            this.label26.Size = new System.Drawing.Size(52, 20);
             this.label26.TabIndex = 27;
             this.label26.Text = "123";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -880,7 +906,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.tableLayoutPanel5.Controls.Add(this.label34, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.comboBox7, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label35, 2, 0);
@@ -904,7 +930,7 @@
             this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label34.Location = new System.Drawing.Point(4, 1);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(72, 16);
+            this.label34.Size = new System.Drawing.Size(56, 20);
             this.label34.TabIndex = 21;
             this.label34.Text = "起始电压";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -912,7 +938,7 @@
             // comboBox7
             // 
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(85, 4);
+            this.comboBox7.Location = new System.Drawing.Point(78, 4);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(79, 20);
             this.comboBox7.TabIndex = 31;
@@ -922,7 +948,7 @@
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label35.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label35.Location = new System.Drawing.Point(179, 1);
+            this.label35.Location = new System.Drawing.Point(172, 1);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(72, 16);
             this.label35.TabIndex = 29;
@@ -932,7 +958,7 @@
             // comboBox6
             // 
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(261, 4);
+            this.comboBox6.Location = new System.Drawing.Point(254, 4);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(61, 20);
             this.comboBox6.TabIndex = 28;
@@ -944,7 +970,7 @@
             this.label36.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label36.Location = new System.Drawing.Point(4, 22);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(72, 16);
+            this.label36.Size = new System.Drawing.Size(56, 20);
             this.label36.TabIndex = 30;
             this.label36.Text = "极限电压";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -954,7 +980,7 @@
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label37.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label37.Location = new System.Drawing.Point(179, 22);
+            this.label37.Location = new System.Drawing.Point(172, 22);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(72, 16);
             this.label37.TabIndex = 32;
@@ -1055,6 +1081,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(208)))), ((int)(((byte)(247)))));
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("隶书", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -1068,6 +1095,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(208)))), ((int)(((byte)(247)))));
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("隶书", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -1081,6 +1109,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(208)))), ((int)(((byte)(247)))));
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("隶书", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -1101,9 +1130,10 @@
             // 
             this.scatterGraph1.Location = new System.Drawing.Point(27, 368);
             this.scatterGraph1.Name = "scatterGraph1";
+            this.scatterGraph1.PlotAreaColor = System.Drawing.Color.Gray;
             this.scatterGraph1.Plots.AddRange(new NationalInstruments.UI.ScatterPlot[] {
             this.scatterPlot1});
-            this.scatterGraph1.Size = new System.Drawing.Size(688, 511);
+            this.scatterGraph1.Size = new System.Drawing.Size(745, 393);
             this.scatterGraph1.TabIndex = 33;
             this.scatterGraph1.UseColorGenerator = true;
             this.scatterGraph1.XAxes.AddRange(new NationalInstruments.UI.XAxis[] {
@@ -1122,7 +1152,7 @@
             // 
             // panelStatus
             // 
-            this.panelStatus.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panelStatus.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panelStatus.Controls.Add(this.tableLayoutPanel2);
             this.panelStatus.Location = new System.Drawing.Point(0, 169);
             this.panelStatus.Name = "panelStatus";
@@ -1292,10 +1322,10 @@
             this.Controls.Add(this.buttonClamp);
             this.Controls.Add(this.panelStatus);
             this.Controls.Add(this.buttonStart);
-            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.panelSysTitleBackgroud);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.scatterGraph1);
+            this.Controls.Add(this.pictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AutoWelding";
             this.Text = "AutoWelding";
@@ -1307,6 +1337,7 @@
             this.panelStatistics.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelInerStatistics.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
@@ -1428,6 +1459,7 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
     }
 }
 
