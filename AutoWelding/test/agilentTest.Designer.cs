@@ -37,18 +37,20 @@
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.led1 = new NationalInstruments.UI.WindowsForms.Led();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.led1 = new NationalInstruments.UI.WindowsForms.Led();
             this.btmCom = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.switch1 = new NationalInstruments.UI.WindowsForms.Switch();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.switch1 = new NationalInstruments.UI.WindowsForms.Switch();
             this.button13 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -65,17 +67,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btmHV = new System.Windows.Forms.Button();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.led1)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.switch1)).BeginInit();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.switch1)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -180,22 +180,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "切换";
             // 
-            // label3
+            // groupBox7
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 169);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "急停按钮";
-            // 
-            // led1
-            // 
-            this.led1.LedStyle = NationalInstruments.UI.LedStyle.Round3D;
-            this.led1.Location = new System.Drawing.Point(18, 189);
-            this.led1.Name = "led1";
-            this.led1.Size = new System.Drawing.Size(64, 64);
-            this.led1.TabIndex = 10;
+            this.groupBox7.Controls.Add(this.button12);
+            this.groupBox7.Controls.Add(this.button11);
+            this.groupBox7.Controls.Add(this.button10);
+            this.groupBox7.Enabled = false;
+            this.groupBox7.Location = new System.Drawing.Point(13, 87);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(318, 68);
+            this.groupBox7.TabIndex = 13;
+            this.groupBox7.TabStop = false;
             // 
             // button12
             // 
@@ -227,6 +222,23 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 169);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "急停按钮";
+            // 
+            // led1
+            // 
+            this.led1.LedStyle = NationalInstruments.UI.LedStyle.Round3D;
+            this.led1.Location = new System.Drawing.Point(18, 189);
+            this.led1.Name = "led1";
+            this.led1.Size = new System.Drawing.Size(64, 64);
+            this.led1.TabIndex = 10;
+            // 
             // btmCom
             // 
             this.btmCom.Location = new System.Drawing.Point(113, 30);
@@ -257,6 +269,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.groupBox6);
             this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.groupBox4);
@@ -270,18 +283,8 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "高压";
             // 
-            // switch1
-            // 
-            this.switch1.Location = new System.Drawing.Point(230, 0);
-            this.switch1.Name = "switch1";
-            this.switch1.Size = new System.Drawing.Size(64, 94);
-            this.switch1.SwitchStyle = NationalInstruments.UI.SwitchStyle.VerticalToggle3D;
-            this.switch1.TabIndex = 8;
-            this.switch1.StateChanged += new NationalInstruments.UI.ActionEventHandler(this.switch1_StateChanged);
-            // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.label8);
             this.groupBox6.Controls.Add(this.textBox7);
             this.groupBox6.Controls.Add(this.switch1);
             this.groupBox6.Controls.Add(this.button13);
@@ -293,12 +296,30 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "输出电压（V）";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(619, 62);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "设备输出";
+            // 
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(21, 39);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(67, 21);
             this.textBox7.TabIndex = 2;
+            // 
+            // switch1
+            // 
+            this.switch1.Location = new System.Drawing.Point(222, 29);
+            this.switch1.Name = "switch1";
+            this.switch1.Size = new System.Drawing.Size(114, 52);
+            this.switch1.SwitchStyle = NationalInstruments.UI.SwitchStyle.HorizontalSlide;
+            this.switch1.TabIndex = 8;
+            this.switch1.StateChanged += new NationalInstruments.UI.ActionEventHandler(this.switch1_StateChanged);
             // 
             // button13
             // 
@@ -452,27 +473,6 @@
             this.btmHV.UseVisualStyleBackColor = true;
             this.btmHV.Click += new System.EventHandler(this.button6_Click);
             // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.button12);
-            this.groupBox7.Controls.Add(this.button11);
-            this.groupBox7.Controls.Add(this.button10);
-            this.groupBox7.Enabled = false;
-            this.groupBox7.Location = new System.Drawing.Point(13, 87);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(318, 68);
-            this.groupBox7.TabIndex = 13;
-            this.groupBox7.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(241, 17);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 12);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "设备输出";
-            // 
             // agilentTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -489,17 +489,17 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.led1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.switch1)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.switch1)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
