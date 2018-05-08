@@ -198,7 +198,7 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(76, 39);
             this.button12.TabIndex = 9;
-            this.button12.Text = "Vce";
+            this.button12.Text = "Vgs";
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
@@ -208,7 +208,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(76, 39);
             this.button11.TabIndex = 8;
-            this.button11.Text = "Vcb";
+            this.button11.Text = "Vgd";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -218,7 +218,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(76, 39);
             this.button10.TabIndex = 7;
-            this.button10.Text = "Vbe";
+            this.button10.Text = "Vds";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -269,7 +269,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.groupBox6);
             this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.groupBox4);
@@ -285,6 +284,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.label8);
             this.groupBox6.Controls.Add(this.textBox7);
             this.groupBox6.Controls.Add(this.switch1);
             this.groupBox6.Controls.Add(this.button13);
@@ -299,7 +299,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(619, 62);
+            this.label8.Location = new System.Drawing.Point(229, 14);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 12);
             this.label8.TabIndex = 9;

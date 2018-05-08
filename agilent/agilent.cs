@@ -113,8 +113,8 @@ namespace agilent
                 ioDmm.WriteString("DISP:PAGE MEAS", true);
                 ioDmm.WriteString("FUNC:IMP CPD", true);
                 ioDmm.WriteString("FUNC:IMP:RANG:AUTO ON", true);
-                ioDmm.WriteString("FREQ 2MHZ", true);
-                ioDmm.WriteString("BIAS:VOLT 10V", true);
+                ioDmm.WriteString("FREQ 1MHZ", true);
+                ioDmm.WriteString("BIAS:VOLT 0V", true);
                 ioDmm.WriteString("VOLT 100MV", true);
 
                 ioDmm.WriteString("APER MED", true);
@@ -141,8 +141,8 @@ namespace agilent
             ioDmm.WriteString("DISP:PAGE MESET", true);
             ioDmm.WriteString("FUNC:IMP CPD", true);
             ioDmm.WriteString("FUNC:IMP:RANG:AUTO ON", true);
-            ioDmm.WriteString("FREQ 2MHZ", true);
-            ioDmm.WriteString("BIAS:VOLT 10V", true);
+            ioDmm.WriteString("FREQ 1MHZ", true);
+            ioDmm.WriteString("BIAS:VOLT 0V", true);
             ioDmm.WriteString("VOLT 100MV", true);
             ioDmm.WriteString("APER MED", true);
             Thread.Sleep(1000);
