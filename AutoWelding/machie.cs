@@ -16,7 +16,7 @@ namespace AutoWelding
         String dataString = null;
 
         /// <summary>
-        /// 构造函数
+        /// 构造函数  
         /// </summary>
         /// <param name="_iNum"></param>
         public TC6200P(string strCom)
