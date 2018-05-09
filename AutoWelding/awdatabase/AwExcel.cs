@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Microsoft.Office.Interop.Excel;
+//using Microsoft.Office.Interop.Excel;
 using System.Reflection; // 引用这个才能使用Missing字段 
 using AutoWelding.system;
 using AutoWelding.control;
 
 namespace AutoWelding.awdatabase
 {
+    /*
     public class AwExcel
     {
         private Microsoft.Office.Interop.Excel._Application xls_exp = null;
@@ -235,4 +236,5 @@ namespace AutoWelding.awdatabase
 
         
     }
+    */
 }

@@ -825,7 +825,7 @@ namespace AutoWelding
             Point point = new Point(0,0);
             panelSysTitleBackgroud.Location = point;
             panelSysTitleBackgroud.Width = NewPixel_X;
-            panelSysTitleBackgroud.Height =(int) (136 *yRate);
+            panelSysTitleBackgroud.Height =(int) (120 *yRate);
 
             point.X = (panelSysTitleBackgroud.Width - panelSysTitle.Width) / 2;
             point.Y = (panelSysTitleBackgroud.Height - panelSysTitle.Height - 20 ) / 2;

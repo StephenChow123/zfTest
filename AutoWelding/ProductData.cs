@@ -10,7 +10,7 @@ namespace AutoWelding
 {
     public class ProductData
     {
-        AwExcel awExcle = null;
+        //AwExcel awExcle = null;
         int passedCount = 0;
         int failedCount = 0;
         SystemParam systemParam;
@@ -44,46 +44,48 @@ namespace AutoWelding
 
         public int CreateExcelFile()
         {
-            awExcle = new AwExcel();
-            string dataPath = systemParam.CurrentPath + "\\data";
+            return 0;
+            //awExcle = new AwExcel();
+            //string dataPath = systemParam.CurrentPath + "\\data";
 
-            if (!Directory.Exists(dataPath))
-            {
-                Directory.CreateDirectory(dataPath);
-            }
+            //if (!Directory.Exists(dataPath))
+            //{
+            //    Directory.CreateDirectory(dataPath);
+            //}
 
-            return awExcle.CreateDataBase(dataPath + "\\" + DateTime.Now.ToString("yy-MM-dd-HH-mm-ss") + ".xls", DateTime.Now.ToString());
+            //return awExcle.CreateDataBase(dataPath + "\\" + DateTime.Now.ToString("yy-MM-dd-HH-mm-ss") + ".xls", DateTime.Now.ToString());
         }
 
         public int CreateExcelFile(ProductBatInfo prdBatInfo, ProductParameter prdParm)
         {
-            awExcle = new AwExcel();
-            string dataPath = "";
+            return 0;
+            //awExcle = new AwExcel();
+            //string dataPath = "";
 
-            if (prdParm.DataPath.Length == 0)
-                dataPath = systemParam.CurrentPath + "\\data";
-            else
-                dataPath = prdParm.DataPath;
+            //if (prdParm.DataPath.Length == 0)
+            //    dataPath = systemParam.CurrentPath + "\\data";
+            //else
+            //    dataPath = prdParm.DataPath;
 
-            if (!Directory.Exists(dataPath))
-            {
-                Directory.CreateDirectory(dataPath);
-            }
+            //if (!Directory.Exists(dataPath))
+            //{
+            //    Directory.CreateDirectory(dataPath);
+            //}
 
-            //客户编号:QE123,流水号：124343,随工单号:GH323,文件名设置为：QE123-124343-GH323.XLS
-            string fileName = "";
+            ////客户编号:QE123,流水号：124343,随工单号:GH323,文件名设置为：QE123-124343-GH323.XLS
+            //string fileName = "";
 
-            return awExcle.CreateDataBase(dataPath + "\\" + fileName, prdParm, prdBatInfo);
+            //return awExcle.CreateDataBase(dataPath + "\\" + fileName, prdParm, prdBatInfo);
         }
 
         public int InsertEntry(ref ExcelDataUnit dataUnit)
         {
-            return awExcle.InsertEntry(ref dataUnit);
+            return 0 /*awExcle.InsertEntry(ref dataUnit)*/;
         }
 
         public void Close()
         {
-            awExcle.Close();
+            //awExcle.Close();
         }
     }
 }
