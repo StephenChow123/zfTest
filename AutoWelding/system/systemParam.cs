@@ -70,9 +70,9 @@ namespace AutoWelding.system
         Color controlFrameColor = Color.FromArgb(255, 171, 205, 230);//Color.FromArgb(255, 203, 191, 125); Color.FromArgb(255, 171, 205, 230)
         Color processBackgroundColor = Color.FromArgb(255, 7, 142, 0);
         // version
-        const string version = "综合测试系统 2.0.1.1 2014-9-10";
+        const string version = "半导体综合测试系统 V1.0.1.1 2018-2-10";
         const string cpyRight = "成都奇旺科技有限公司   版权所有";
-        string controlVersion = "2.0.1.1";
+        string controlVersion = "1.0.1.1";
         string currentPath = "";
         private AccountType accountType;
         private List<AccountPermision> accountPermisionList;        //记录所有用户的permision

@@ -551,7 +551,7 @@ namespace AutoWelding
 
             statisticsPanel.BorderColor = sysParam.ControlFrameColor;
             statisticsPanel.BorderWidth = 3;
-            statisticsPanel.Width = (int)(190f*xRate);
+            statisticsPanel.Width = (int)(245f*xRate);
             statisticsPanel.Height = imagePanel.Height; 
             statisticsPanel.Parent = this;
             statisticsPanel.TitleBackground.Height = 30;
@@ -590,7 +590,7 @@ namespace AutoWelding
 
             SelectLine.BorderColor = sysParam.ControlFrameColor;
             SelectLine.BorderWidth = 3;
-            SelectLine.Width = (int)(190f * xRate);
+            SelectLine.Width = (int)(160f * xRate);
             SelectLine.Height = imagePanel.Height;
             SelectLine.Parent = this;
             SelectLine.TitleBackground.Height = 30;
@@ -846,7 +846,7 @@ namespace AutoWelding
             cmdPanel.Location = point;
             cmdPanel.BorderColor = sysParam.ControlFrameColor;
             cmdPanel.BorderWidth = 2;
-            cmdPanel.Width = (int)(205 * yRate);
+            cmdPanel.Width = (int)(160 * yRate);
             cmdPanel.Height = statisticsPanel.Location.Y + statisticsPanel.Height - cmdPanel.Location.Y;
             cmdPanel.Parent = this;
             cmdPanel.TitleBackground.Height = 30;
