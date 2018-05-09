@@ -133,6 +133,8 @@ namespace AutoWelding
         private AwPanel statusAwPanel;
         private AwPanel vppPanel;
         private AwPanel statisticsPanel;
+        private AwPanel SelectLine;
+
         private AwPanel productParamPanel;
         private AwPanel cmdPanel;
         List<Button> menuButtonList;
@@ -543,13 +545,13 @@ namespace AutoWelding
         {
             Point point = new Point();
             statisticsPanel = new AwPanel();
-            point.X = imagePanel.Location.X+ imagePanel.Width+10;
-            point.Y = imagePanel.Location.Y;
+            point.X = SelectLine.Location.X+ SelectLine.Width+10;
+            point.Y = SelectLine.Location.Y;
             statisticsPanel.Location = point;
 
             statisticsPanel.BorderColor = sysParam.ControlFrameColor;
             statisticsPanel.BorderWidth = 3;
-            statisticsPanel.Width = (int)(390f*xRate);
+            statisticsPanel.Width = (int)(190f*xRate);
             statisticsPanel.Height = imagePanel.Height; 
             statisticsPanel.Parent = this;
             statisticsPanel.TitleBackground.Height = 30;
@@ -574,6 +576,45 @@ namespace AutoWelding
             point.Y = (panelStatistics.Height - panelInerStatistics.Height) / 2;
             panelInerStatistics.Location = point;
 */        
+        }
+        /// <summary>
+        /// 手动选择曲线
+        /// </summary>
+        void InitSelcetLine()
+        {
+            Point point = new Point();
+            SelectLine = new AwPanel();
+            point.X = imagePanel.Location.X + imagePanel.Width + 10;
+            point.Y = imagePanel.Location.Y;
+            SelectLine.Location = point;
+
+            SelectLine.BorderColor = sysParam.ControlFrameColor;
+            SelectLine.BorderWidth = 3;
+            SelectLine.Width = (int)(190f * xRate);
+            SelectLine.Height = imagePanel.Height;
+            SelectLine.Parent = this;
+            SelectLine.TitleBackground.Height = 30;
+            SelectLine.TitleBackground.BackColor = sysParam.ControlBackgroundColor;
+
+            Font fn = new Font("华文楷体", (float)14, FontStyle.Bold);
+            SelectLine.Title.Font = fn;
+            SelectLine.Title.ForeColor = Color.FromArgb(255, 255, 255);
+
+            SelectLine.Title.Text = "曲线选择";
+
+            panelSelect.Width = SelectLine.Width - 20;
+            panelSelect.Height = SelectLine.Height - SelectLine.TitleBackground.Height - 20;
+            panelSelect.Parent = SelectLine;
+
+            point.X = 10;
+            point.Y = SelectLine.TitleBackground.Height + 10;
+
+            panelSelect.Location = point;
+            /*
+                        point.X = (panelStatistics.Width - panelInerStatistics.Width) / 2;
+                        point.Y = (panelStatistics.Height - panelInerStatistics.Height) / 2;
+                        panelInerStatistics.Location = point;
+            */
         }
 
         void InitproductParamPanel()
@@ -685,10 +726,11 @@ namespace AutoWelding
                 else 
                 {
                     float oldSize = ctr.Font.Size;
-                    if (ctr is Label)
+                    if (ctr is Label || ctr is CheckBox)
                     {
                         Font lFont = new Font("华文楷体", (float)disRate * oldSize, FontStyle.Bold);
                         ctr.Font = lFont;
+                        ctr.ForeColor = SystemColors.MenuHighlight;
                     }
                     else
                     {
@@ -734,8 +776,7 @@ namespace AutoWelding
 
             DrawProcessLines();
 
-            UpFont(panel2);
-            UpFont(panelStatus);
+
         }
 
         void InitParameters()
@@ -769,8 +810,12 @@ namespace AutoWelding
             InitSysTitle();
             InitStatusPanel();
             InitImagePanel();
+            InitSelcetLine();
             InitStatisticsPanel();
             InitCmdButtons();
+            UpFont(panel2);
+            UpFont(panelStatus);
+            UpFont(panelSelect);
             //InitParameters();        
         }
 
