@@ -220,6 +220,7 @@ namespace AutoWelding
             openSave.RegistryOp.GetValue("com_ComBoard", ref strCom2);
             mcTC6200P = new TC6200P(strCom1);
             mcComBoard = new ComBoard(strCom2);
+            mcAgilent = new agilent.Agilent();
             InitializeComponent();
             sysParam = SystemParam.GetInstance();
             excelDataList = new List<ExcelDataUnit>();
@@ -825,7 +826,7 @@ namespace AutoWelding
             Point point = new Point(0,0);
             panelSysTitleBackgroud.Location = point;
             panelSysTitleBackgroud.Width = NewPixel_X;
-            panelSysTitleBackgroud.Height =(int) (120 *yRate);
+            panelSysTitleBackgroud.Height =(int) (140 *yRate);
 
             point.X = (panelSysTitleBackgroud.Width - panelSysTitle.Width) / 2;
             point.Y = (panelSysTitleBackgroud.Height - panelSysTitle.Height - 20 ) / 2;
@@ -846,7 +847,7 @@ namespace AutoWelding
             cmdPanel.Location = point;
             cmdPanel.BorderColor = sysParam.ControlFrameColor;
             cmdPanel.BorderWidth = 2;
-            cmdPanel.Width = (int)(160 * yRate);
+            cmdPanel.Width = (int)(158 * yRate);
             cmdPanel.Height = statisticsPanel.Location.Y + statisticsPanel.Height - cmdPanel.Location.Y;
             cmdPanel.Parent = this;
             cmdPanel.TitleBackground.Height = 30;

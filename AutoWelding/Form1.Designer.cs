@@ -333,7 +333,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(208)))), ((int)(((byte)(247)))));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.83799F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
@@ -608,7 +608,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(208)))), ((int)(((byte)(247)))));
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("隶书", 15.75F);
+            this.label6.Font = new System.Drawing.Font("隶书", 14F);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label6.Location = new System.Drawing.Point(1545, 2);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -623,7 +623,7 @@
             this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
             this.tableLayoutPanel3.Controls.Add(this.comboBox3, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.comboBox2, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label20, 0, 2);
@@ -647,7 +647,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "COM2"});
-            this.comboBox3.Location = new System.Drawing.Point(76, 71);
+            this.comboBox3.Location = new System.Drawing.Point(74, 71);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(134, 26);
@@ -658,7 +658,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "COM1"});
-            this.comboBox2.Location = new System.Drawing.Point(76, 38);
+            this.comboBox2.Location = new System.Drawing.Point(74, 38);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(134, 26);
@@ -673,7 +673,7 @@
             this.label20.Location = new System.Drawing.Point(5, 67);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(62, 33);
+            this.label20.Size = new System.Drawing.Size(60, 33);
             this.label20.TabIndex = 25;
             this.label20.Text = "高压系统";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -687,7 +687,7 @@
             this.label19.Location = new System.Drawing.Point(5, 34);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(62, 32);
+            this.label19.Size = new System.Drawing.Size(60, 32);
             this.label19.TabIndex = 24;
             this.label19.Text = "测试系统";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -701,7 +701,7 @@
             this.label11.Location = new System.Drawing.Point(5, 1);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 32);
+            this.label11.Size = new System.Drawing.Size(60, 32);
             this.label11.TabIndex = 23;
             this.label11.Text = "LRC系统";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -709,7 +709,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(76, 5);
+            this.comboBox1.Location = new System.Drawing.Point(74, 5);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(134, 26);
@@ -1149,7 +1149,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(208)))), ((int)(((byte)(247)))));
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("隶书", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Font = new System.Drawing.Font("隶书", 14F);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.Location = new System.Drawing.Point(6, 2);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -1164,7 +1164,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(208)))), ((int)(((byte)(247)))));
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("隶书", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Font = new System.Drawing.Font("隶书", 14F);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Location = new System.Drawing.Point(1020, 2);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -1179,7 +1179,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(208)))), ((int)(((byte)(247)))));
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("隶书", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Font = new System.Drawing.Font("隶书", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(289, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -1428,7 +1428,8 @@
             // 
             // tableLayoutPanel9
             // 
-            this.tableLayoutPanel9.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tableLayoutPanel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tableLayoutPanel9.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel9.ColumnCount = 2;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.46073F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.53927F));
@@ -1466,90 +1467,93 @@
             // 
             // led1
             // 
+            this.led1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.led1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.led1.LedStyle = NationalInstruments.UI.LedStyle.Square3D;
-            this.led1.Location = new System.Drawing.Point(4, 4);
+            this.led1.Location = new System.Drawing.Point(5, 5);
             this.led1.Margin = new System.Windows.Forms.Padding(4);
             this.led1.Name = "led1";
             this.led1.OffColor = System.Drawing.Color.Lime;
-            this.led1.Size = new System.Drawing.Size(84, 60);
+            this.led1.Size = new System.Drawing.Size(83, 59);
             this.led1.TabIndex = 7;
             // 
             // led2
             // 
             this.led2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.led2.LedStyle = NationalInstruments.UI.LedStyle.Square3D;
-            this.led2.Location = new System.Drawing.Point(4, 140);
+            this.led2.Location = new System.Drawing.Point(5, 141);
             this.led2.Margin = new System.Windows.Forms.Padding(4);
             this.led2.Name = "led2";
             this.led2.OffColor = System.Drawing.Color.Red;
-            this.led2.Size = new System.Drawing.Size(84, 60);
+            this.led2.Size = new System.Drawing.Size(83, 59);
             this.led2.TabIndex = 8;
             // 
             // led3
             // 
             this.led3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.led3.LedStyle = NationalInstruments.UI.LedStyle.Square3D;
-            this.led3.Location = new System.Drawing.Point(4, 276);
+            this.led3.Location = new System.Drawing.Point(5, 277);
             this.led3.Margin = new System.Windows.Forms.Padding(4);
             this.led3.Name = "led3";
             this.led3.OffColor = System.Drawing.Color.Blue;
-            this.led3.Size = new System.Drawing.Size(84, 60);
+            this.led3.Size = new System.Drawing.Size(83, 59);
             this.led3.TabIndex = 9;
             // 
             // led4
             // 
             this.led4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.led4.LedStyle = NationalInstruments.UI.LedStyle.Square3D;
-            this.led4.Location = new System.Drawing.Point(4, 412);
+            this.led4.Location = new System.Drawing.Point(5, 413);
             this.led4.Margin = new System.Windows.Forms.Padding(4);
             this.led4.Name = "led4";
             this.led4.OffColor = System.Drawing.Color.Cyan;
-            this.led4.Size = new System.Drawing.Size(84, 60);
+            this.led4.Size = new System.Drawing.Size(83, 59);
             this.led4.TabIndex = 10;
             // 
             // led5
             // 
             this.led5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.led5.LedStyle = NationalInstruments.UI.LedStyle.Square3D;
-            this.led5.Location = new System.Drawing.Point(4, 548);
+            this.led5.Location = new System.Drawing.Point(5, 549);
             this.led5.Margin = new System.Windows.Forms.Padding(4);
             this.led5.Name = "led5";
             this.led5.OffColor = System.Drawing.Color.Yellow;
-            this.led5.Size = new System.Drawing.Size(84, 60);
+            this.led5.Size = new System.Drawing.Size(83, 59);
             this.led5.TabIndex = 11;
             // 
             // led6
             // 
             this.led6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.led6.LedStyle = NationalInstruments.UI.LedStyle.Square3D;
-            this.led6.Location = new System.Drawing.Point(4, 684);
+            this.led6.Location = new System.Drawing.Point(5, 685);
             this.led6.Margin = new System.Windows.Forms.Padding(4);
             this.led6.Name = "led6";
             this.led6.OffColor = System.Drawing.Color.Fuchsia;
-            this.led6.Size = new System.Drawing.Size(84, 60);
+            this.led6.Size = new System.Drawing.Size(83, 59);
             this.led6.TabIndex = 12;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.checkBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox1.Location = new System.Drawing.Point(96, 4);
+            this.checkBox1.Font = new System.Drawing.Font("宋体", 14F);
+            this.checkBox1.Location = new System.Drawing.Point(97, 5);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(186, 60);
+            this.checkBox1.Size = new System.Drawing.Size(184, 59);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Cgd";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox2.Location = new System.Drawing.Point(96, 140);
+            this.checkBox2.Location = new System.Drawing.Point(97, 141);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(186, 60);
+            this.checkBox2.Size = new System.Drawing.Size(184, 59);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Cgs";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -1558,10 +1562,10 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox3.Location = new System.Drawing.Point(96, 276);
+            this.checkBox3.Location = new System.Drawing.Point(97, 277);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(186, 60);
+            this.checkBox3.Size = new System.Drawing.Size(184, 59);
             this.checkBox3.TabIndex = 2;
             this.checkBox3.Text = "Cds";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -1570,10 +1574,10 @@
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox4.Location = new System.Drawing.Point(96, 412);
+            this.checkBox4.Location = new System.Drawing.Point(97, 413);
             this.checkBox4.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(186, 60);
+            this.checkBox4.Size = new System.Drawing.Size(184, 59);
             this.checkBox4.TabIndex = 3;
             this.checkBox4.Text = "Ciss";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -1582,10 +1586,10 @@
             // 
             this.checkBox5.AutoSize = true;
             this.checkBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox5.Location = new System.Drawing.Point(96, 548);
+            this.checkBox5.Location = new System.Drawing.Point(97, 549);
             this.checkBox5.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(186, 60);
+            this.checkBox5.Size = new System.Drawing.Size(184, 59);
             this.checkBox5.TabIndex = 4;
             this.checkBox5.Text = "Coss";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -1594,10 +1598,10 @@
             // 
             this.checkBox6.AutoSize = true;
             this.checkBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox6.Location = new System.Drawing.Point(96, 684);
+            this.checkBox6.Location = new System.Drawing.Point(97, 685);
             this.checkBox6.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(186, 60);
+            this.checkBox6.Size = new System.Drawing.Size(184, 59);
             this.checkBox6.TabIndex = 5;
             this.checkBox6.Text = "Crss";
             this.checkBox6.UseVisualStyleBackColor = true;
