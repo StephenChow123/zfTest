@@ -34,6 +34,11 @@ namespace AutoWelding.test
 
         private void button4_Click(object sender, EventArgs e)
         {
+            System.Windows.Forms.Cursor.Current = Cursors.WaitCursor;
+
+            System.Windows.Forms.Cursor.Current = Cursors.Default;
+
+
             bool IsOk=AutoWelding.mcAgilent.InitIO(textBox1.Text);
             button1.Enabled = IsOk;
             button2.Enabled = IsOk;

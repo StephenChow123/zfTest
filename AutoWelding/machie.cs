@@ -36,7 +36,7 @@ namespace AutoWelding
             DateTime dt = DateTime.Now;
             while (true)
             {
-                if (swNow.ElapsedMilliseconds > 200)
+                if (swNow.ElapsedMilliseconds > 2000)
                 {
                     buffer = new List<byte>(4096);
                     return false;
@@ -79,9 +79,10 @@ namespace AutoWelding
             {
                 IsHandshaked = false;
                 comBoard.Open();
-                comBoard.WriteLine("*OPC?");
+                comBoard.WriteLine("*IDN?" + '\n');
+
                 string strReturn = "";
-                if (getString(ref strReturn))
+                if (getString(ref strReturn))///
                 {
                     IsHandshaked = true;
                     return true;
@@ -101,49 +102,49 @@ namespace AutoWelding
         }
         public bool SetVolt(float _vlot)
         {
-            string strSend = "SOUR:VOLT" + _vlot.ToString("0.00");
+            string strSend = "SOUR:VOLT" + _vlot.ToString("0.00")+'\n';
             comBoard.WriteLine(strSend);
             return true;
         }
         public bool SetVoltLimHight(float H_Volot)
         {
-            string strSend = "SOUR:VOLT:LIMIT:HIGH" + H_Volot.ToString("0.00");
+            string strSend = "SOUR:VOLT:LIMIT:HIGH" + H_Volot.ToString("0.00") + '\n';
             comBoard.WriteLine(strSend);
             return true;
         }
         public bool SetVoltLimLow(float L_Volot)
         {
-            string strSend = "SOUR:VOLT:LIMIT:LOW" + L_Volot.ToString("0.00");
+            string strSend = "SOUR:VOLT:LIMIT:LOW" + L_Volot.ToString("0.00") + '\n';
             comBoard.WriteLine(strSend);
             return true;
         }
         public   bool SetCurrLimH(float _Curr)
         {
-            string strSend = "SOUR:CURR:LIMIT:HIGH" + _Curr.ToString("0.00");
+            string strSend = "SOUR:CURR:LIMIT:HIGH" + _Curr.ToString("0.00") + '\n';
             comBoard.WriteLine(strSend);
             return true;
         }
         public bool SetCurrLimL(float _Curr)
         {
-            string strSend = "SOUR:CURR:LIMIT:LOW" + _Curr.ToString("0.00");
+            string strSend = "SOUR:CURR:LIMIT:LOW" + _Curr.ToString("0.00") + '\n';
             comBoard.WriteLine(strSend);
             return true;
         }
         public bool SetOn()
         {
-            string strSend = "CONFigure:OUTPut ON";
+            string strSend = "CONFigure:OUTPut ON" + '\n';
             comBoard.WriteLine(strSend);
             return true;
         }
         public bool SetOff()
         {
-            string strSend = "CONFigure:OUTPut OFF";
+            string strSend = "CONFigure:OUTPut OFF" + '\n';
             comBoard.WriteLine(strSend);
             return true;
         }
         public bool Cls()
         {
-            string strSend = "*CLS";
+            string strSend = "*CLS" + '\n';
             comBoard.WriteLine(strSend);
             return true;
         }
@@ -199,17 +200,17 @@ namespace AutoWelding
         /// </summary>
         public bool SelectType(emType type)
         {
-            byte[] sendByte = new byte[1];
+            byte[] sendByte = new byte[14];
             switch (type)
             {
                 case emType.Vgs:
-                    sendByte =new byte [14]{ 0x01, 0x77,0,0,0x0d,0,0,0,0,0,0,0x0d,0x0d,0x0d };
+                    sendByte =new byte[14]{0x11,0x77,0,0,0x0c,0,0,0,0,0,0,0x0d,0x0d,0x0d};
                     break;
                 case emType.Vds:
-                    sendByte =new byte[14]{ 0x01, 0x77,0x10,0x48,0,0,0,0,0,0,0,0x0d,0x0d,0x0d };
+                    sendByte =new byte[14]{0x11,0x77,0x10,0x48,0,0,0,0,0,0,0,0x0d,0x0d,0x0d};
                     break;
                 case emType.Vgd:
-                    sendByte = new byte[14] { 0x01, 0x77, 0x02, 0x0d, 0, 0, 0, 0, 0, 0, 0, 0x0d, 0x0d, 0x0d };
+                    sendByte =new byte[14]{0x11,0x77,0x02,0x0c,0,0,0,0,0,0,0,0x0d,0x0d,0x0d};
                     break;
                 default:
                     break;
