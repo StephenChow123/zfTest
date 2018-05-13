@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO.Ports;
 using System.Diagnostics;
+using System.Threading;
 
 namespace AutoWelding
 {
@@ -27,7 +28,38 @@ namespace AutoWelding
             comBoard.Parity = 0; //奇偶校验
             comBoard.StopBits = StopBits.One;//停止位
             comBoard.ReadTimeout = 1000; //读超时 
+            comBoard.DataReceived += ComBoard_DataReceived;
         }
+        private void ComBoard_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            Thread.Sleep(20);
+            StringBuilder builder_R = new StringBuilder();
+            int n = comBoard.BytesToRead;
+            byte[] buf = new byte[n];
+            comBoard.Read(buf, 0, n);//读取缓冲数据
+            //comBoard.ReadLine();
+            if (n > 1 && buf[n - 1] == 0x0a)
+            {
+                byte[] sn = new byte[n - 1];
+                for (int i = 0; i < n - 1; i++)
+                {
+                    sn[i] = buf[i];
+                }
+                builder_R.Clear();
+                builder_R.Append(Encoding.ASCII.GetString(sn));
+                string strGet = builder_R.ToString();
+                switch (strGet)
+                {
+                    case "1":
+                        IsHandshaked = true;
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+        }
+
         public bool getString(ref string data)
         {
             data = null;
@@ -79,12 +111,10 @@ namespace AutoWelding
             {
                 IsHandshaked = false;
                 comBoard.Open();
-                comBoard.WriteLine("*IDN?" + '\n');
-
-                string strReturn = "";
-                if (getString(ref strReturn))///
+                comBoard.WriteLine("*IDN?");//是发OA，还是"*OPC?"
+                Thread.Sleep(200);
+                if(IsHandshaked)
                 {
-                    IsHandshaked = true;
                     return true;
                 }
                 comBoard.Close();
@@ -102,49 +132,49 @@ namespace AutoWelding
         }
         public bool SetVolt(float _vlot)
         {
-            string strSend = "SOUR:VOLT" + _vlot.ToString("0.00")+'\n';
+            string strSend = "SOUR:VOLT" + _vlot.ToString("0.00");
             comBoard.WriteLine(strSend);
             return true;
         }
         public bool SetVoltLimHight(float H_Volot)
         {
-            string strSend = "SOUR:VOLT:LIMIT:HIGH" + H_Volot.ToString("0.00") + '\n';
+            string strSend = "SOUR:VOLT:LIMIT:HIGH" + H_Volot.ToString("0.00") ;
             comBoard.WriteLine(strSend);
             return true;
         }
         public bool SetVoltLimLow(float L_Volot)
         {
-            string strSend = "SOUR:VOLT:LIMIT:LOW" + L_Volot.ToString("0.00") + '\n';
+            string strSend = "SOUR:VOLT:LIMIT:LOW" + L_Volot.ToString("0.00");
             comBoard.WriteLine(strSend);
             return true;
         }
         public   bool SetCurrLimH(float _Curr)
         {
-            string strSend = "SOUR:CURR:LIMIT:HIGH" + _Curr.ToString("0.00") + '\n';
+            string strSend = "SOUR:CURR:LIMIT:HIGH" + _Curr.ToString("0.00") ;
             comBoard.WriteLine(strSend);
             return true;
         }
         public bool SetCurrLimL(float _Curr)
         {
-            string strSend = "SOUR:CURR:LIMIT:LOW" + _Curr.ToString("0.00") + '\n';
+            string strSend = "SOUR:CURR:LIMIT:LOW" + _Curr.ToString("0.00");
             comBoard.WriteLine(strSend);
             return true;
         }
         public bool SetOn()
         {
-            string strSend = "CONFigure:OUTPut ON" + '\n';
+            string strSend = "CONFigure:OUTPut ON";
             comBoard.WriteLine(strSend);
             return true;
         }
         public bool SetOff()
         {
-            string strSend = "CONFigure:OUTPut OFF" + '\n';
+            string strSend = "CONFigure:OUTPut OFF";
             comBoard.WriteLine(strSend);
             return true;
         }
         public bool Cls()
         {
-            string strSend = "*CLS" + '\n';
+            string strSend = "*CLS";
             comBoard.WriteLine(strSend);
             return true;
         }
