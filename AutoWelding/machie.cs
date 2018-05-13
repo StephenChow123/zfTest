@@ -15,7 +15,7 @@ namespace AutoWelding
         StringBuilder builder = new StringBuilder();
         Stopwatch swNow = new Stopwatch();
         String dataString = null;
-
+        public float H_Volot, L_Volot, H_Curr, L_Curr;
         /// <summary>
         /// 构造函数
         /// </summary>
@@ -182,12 +182,7 @@ namespace AutoWelding
     public class ComBoard
     {
         public SerialPort comBoard;
-        public enum emType
-        {
-            Vgs=0,
-            Vds=1,
-            Vgd=2,
-        }
+
         public ComBoard(string strCom)
         {
             comBoard = new SerialPort(strCom);
@@ -233,13 +228,13 @@ namespace AutoWelding
             byte[] sendByte = new byte[14];
             switch (type)
             {
-                case emType.Vgs:
+                case emType.Cgs:
                     sendByte =new byte[14]{0x11,0x77,0,0,0x0c,0,0,0,0,0,0,0x0d,0x0d,0x0d};
                     break;
-                case emType.Vds:
+                case emType.Cds:
                     sendByte =new byte[14]{0x11,0x77,0x10,0x48,0,0,0,0,0,0,0,0x0d,0x0d,0x0d};
                     break;
-                case emType.Vgd:
+                case emType.Cgd:
                     sendByte =new byte[14]{0x11,0x77,0x02,0x0c,0,0,0,0,0,0,0,0x0d,0x0d,0x0d};
                     break;
                 default:

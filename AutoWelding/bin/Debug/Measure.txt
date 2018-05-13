@@ -1,0 +1,9 @@
+mc@*RST
+mc@*CLS
+mc@TRIG:SOUR BUS
+mc@ABORT
+mc@INIT
+mc@TRIGGER:IMMEDIATE
+mc@TRIG:SOUR BUS
+mc@FETCH?
+sleep@1

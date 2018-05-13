@@ -90,18 +90,22 @@
             this.label33 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label34 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -151,8 +155,13 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.tableLayoutPanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scatterGraph1)).BeginInit();
             this.panelStatus.SuspendLayout();
             this.panelSysTitleBackgroud.SuspendLayout();
@@ -177,7 +186,7 @@
             this.SystemToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1440, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1446, 25);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -594,7 +603,7 @@
             this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel3.Controls.Add(this.comboBox3, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.comboBox2, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label20, 0, 2);
@@ -614,22 +623,26 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "COM2"});
-            this.comboBox3.Location = new System.Drawing.Point(48, 46);
+            this.comboBox3.Location = new System.Drawing.Point(63, 46);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(91, 20);
+            this.comboBox3.Size = new System.Drawing.Size(114, 20);
             this.comboBox3.TabIndex = 28;
             // 
             // comboBox2
             // 
+            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "COM1"});
-            this.comboBox2.Location = new System.Drawing.Point(48, 25);
+            this.comboBox2.Location = new System.Drawing.Point(63, 25);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(91, 20);
+            this.comboBox2.Size = new System.Drawing.Size(114, 20);
             this.comboBox2.TabIndex = 27;
             // 
             // label20
@@ -640,7 +653,7 @@
             this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label20.Location = new System.Drawing.Point(4, 43);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(37, 21);
+            this.label20.Size = new System.Drawing.Size(52, 21);
             this.label20.TabIndex = 25;
             this.label20.Text = "高压系统";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -653,7 +666,7 @@
             this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label19.Location = new System.Drawing.Point(4, 22);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(37, 20);
+            this.label19.Size = new System.Drawing.Size(52, 20);
             this.label19.TabIndex = 24;
             this.label19.Text = "测试系统";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -666,17 +679,19 @@
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label11.Location = new System.Drawing.Point(4, 1);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 20);
+            this.label11.Size = new System.Drawing.Size(52, 20);
             this.label11.TabIndex = 23;
             this.label11.Text = "LRC系统";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // comboBox1
             // 
+            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(48, 4);
+            this.comboBox1.Location = new System.Drawing.Point(63, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(91, 20);
+            this.comboBox1.Size = new System.Drawing.Size(114, 20);
             this.comboBox1.TabIndex = 26;
             // 
             // tableLayoutPanel4
@@ -901,16 +916,17 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.Controls.Add(this.label34, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.comboBox7, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label35, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.comboBox6, 3, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label36, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.label37, 2, 1);
+            this.tableLayoutPanel5.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.comboBox5, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.comboBox8, 3, 1);
+            this.tableLayoutPanel5.Controls.Add(this.label36, 2, 1);
+            this.tableLayoutPanel5.Controls.Add(this.numericUpDown1, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.numericUpDown2, 3, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(680, 35);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 3;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(342, 65);
@@ -924,19 +940,10 @@
             this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label34.Location = new System.Drawing.Point(4, 1);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(78, 20);
+            this.label34.Size = new System.Drawing.Size(78, 31);
             this.label34.TabIndex = 21;
             this.label34.Text = "起始电压";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(89, 4);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(78, 20);
-            this.comboBox7.TabIndex = 31;
             // 
             // label35
             // 
@@ -946,19 +953,52 @@
             this.label35.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label35.Location = new System.Drawing.Point(174, 1);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(78, 20);
+            this.label35.Size = new System.Drawing.Size(78, 31);
             this.label35.TabIndex = 29;
             this.label35.Text = "截止电压";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox6
+            // label3
             // 
-            this.comboBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(259, 4);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(79, 20);
-            this.comboBox6.TabIndex = 28;
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Location = new System.Drawing.Point(4, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 31);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "坐标方式";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.ItemHeight = 12;
+            this.comboBox5.Items.AddRange(new object[] {
+            "线性",
+            "对数"});
+            this.comboBox5.Location = new System.Drawing.Point(89, 36);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(78, 20);
+            this.comboBox5.TabIndex = 28;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Items.AddRange(new object[] {
+            "自动",
+            "手动"});
+            this.comboBox8.Location = new System.Drawing.Point(259, 36);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(79, 20);
+            this.comboBox8.TabIndex = 33;
+            this.comboBox8.SelectedIndexChanged += new System.EventHandler(this.comboBox8_SelectedIndexChanged);
             // 
             // label36
             // 
@@ -966,25 +1006,28 @@
             this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label36.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label36.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label36.Location = new System.Drawing.Point(4, 22);
+            this.label36.Location = new System.Drawing.Point(174, 33);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(78, 20);
-            this.label36.TabIndex = 30;
-            this.label36.Text = "极限电压";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label36.Size = new System.Drawing.Size(78, 31);
+            this.label36.TabIndex = 32;
+            this.label36.Text = "点位方式";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label37
+            // numericUpDown1
             // 
-            this.label37.AutoSize = true;
-            this.label37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label37.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label37.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label37.Location = new System.Drawing.Point(174, 22);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(78, 20);
-            this.label37.TabIndex = 32;
-            this.label37.Text = "极限电压";
-            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown1.Location = new System.Drawing.Point(89, 4);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(78, 21);
+            this.numericUpDown1.TabIndex = 34;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown2.Location = new System.Drawing.Point(259, 4);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(79, 21);
+            this.numericUpDown2.TabIndex = 35;
             // 
             // tableLayoutPanel6
             // 
@@ -1007,49 +1050,17 @@
             this.tableLayoutPanel8.ColumnCount = 2;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.89655F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.10345F));
-            this.tableLayoutPanel8.Controls.Add(this.comboBox5, 1, 1);
-            this.tableLayoutPanel8.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.comboBox4, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.label25, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.numericUpDown3, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(173, 59);
             this.tableLayoutPanel8.TabIndex = 0;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(101, 33);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(68, 20);
-            this.comboBox5.TabIndex = 28;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Location = new System.Drawing.Point(4, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 28);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "坐标方式";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(101, 4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(68, 20);
-            this.comboBox4.TabIndex = 27;
             // 
             // label25
             // 
@@ -1061,8 +1072,16 @@
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(90, 28);
             this.label25.TabIndex = 1;
-            this.label25.Text = "产品类型";
+            this.label25.Text = "电压点数";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown3.Location = new System.Drawing.Point(101, 4);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(68, 21);
+            this.numericUpDown3.TabIndex = 29;
             // 
             // tableLayoutPanel10
             // 
@@ -1070,6 +1089,10 @@
             this.tableLayoutPanel10.ColumnCount = 2;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.30107F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.69893F));
+            this.tableLayoutPanel10.Controls.Add(this.label37, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label41, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.numericUpDown4, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.textBox1, 1, 1);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(182, 3);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
@@ -1078,6 +1101,48 @@
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(220, 59);
             this.tableLayoutPanel10.TabIndex = 1;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label37.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label37.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label37.Location = new System.Drawing.Point(4, 30);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(111, 28);
+            this.label37.TabIndex = 28;
+            this.label37.Text = "电压值";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label41.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label41.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label41.Location = new System.Drawing.Point(4, 1);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(111, 28);
+            this.label41.TabIndex = 29;
+            this.label41.Text = "点位";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown4.Location = new System.Drawing.Point(122, 4);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(94, 21);
+            this.numericUpDown4.TabIndex = 30;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(122, 33);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(94, 21);
+            this.textBox1.TabIndex = 31;
             // 
             // label4
             // 
@@ -1151,10 +1216,6 @@
             // 
             this.scatterPlot1.XAxis = this.xAxis1;
             this.scatterPlot1.YAxis = this.yAxis1;
-            // 
-            // xAxis1
-            // 
-            this.xAxis1.ScaleType = NationalInstruments.UI.ScaleType.Logarithmic;
             // 
             // scatterPlot2
             // 
@@ -1517,7 +1578,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1293, 733);
+            this.ClientSize = new System.Drawing.Size(1446, 886);
             this.Controls.Add(this.panelSelect);
             this.Controls.Add(this.buttonReplaceColloid);
             this.Controls.Add(this.buttonNewPrdBat);
@@ -1553,9 +1614,15 @@
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scatterGraph1)).EndInit();
             this.panelStatus.ResumeLayout(false);
             this.panelSysTitleBackgroud.ResumeLayout(false);
@@ -1660,13 +1727,8 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
         private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label38;
@@ -1689,6 +1751,15 @@
         private NationalInstruments.UI.ScatterPlot scatterPlot4;
         private NationalInstruments.UI.ScatterPlot scatterPlot5;
         private NationalInstruments.UI.ScatterPlot scatterPlot6;
+        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

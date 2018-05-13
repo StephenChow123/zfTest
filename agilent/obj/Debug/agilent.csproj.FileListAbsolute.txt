@@ -18,3 +18,10 @@ C:\Users\aaron\Desktop\zfTest\agilent\bin\Debug\Ivi.Visa.Interop.dll
 C:\Users\aaron\Desktop\zfTest\agilent\bin\Debug\Ivi.Visa.Interop.xml
 C:\Users\aaron\Desktop\zfTest\agilent\obj\Debug\agilent.dll
 C:\Users\aaron\Desktop\zfTest\agilent\obj\Debug\agilent.pdb
+D:\Home\Git\zfTest\agilent\bin\Debug\agilent.dll
+D:\Home\Git\zfTest\agilent\bin\Debug\agilent.pdb
+D:\Home\Git\zfTest\agilent\bin\Debug\Ivi.Visa.Interop.dll
+D:\Home\Git\zfTest\agilent\bin\Debug\Ivi.Visa.Interop.xml
+D:\Home\Git\zfTest\agilent\obj\Debug\agilent.csprojResolveAssemblyReference.cache
+D:\Home\Git\zfTest\agilent\obj\Debug\agilent.dll
+D:\Home\Git\zfTest\agilent\obj\Debug\agilent.pdb

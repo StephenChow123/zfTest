@@ -35,14 +35,11 @@ namespace AutoWelding.test
         private void button4_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Cursor.Current = Cursors.WaitCursor;
-
-            System.Windows.Forms.Cursor.Current = Cursors.Default;
-
-
             bool IsOk=AutoWelding.mcAgilent.InitIO(textBox1.Text);
             button1.Enabled = IsOk;
             button2.Enabled = IsOk;
             button3.Enabled = IsOk;
+            System.Windows.Forms.Cursor.Current = Cursors.Default;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -170,7 +167,7 @@ namespace AutoWelding.test
             catch (Exception)
             {
 
-                throw;
+                //throw;
             }
            
         }
@@ -183,11 +180,13 @@ namespace AutoWelding.test
                 float vMin = (float)Convert.ToDouble(textBox3.Text);
                 AutoWelding.mcTC6200P.SetVoltLimHight(vMax);
                 AutoWelding.mcTC6200P.SetVoltLimLow(vMin);
+                AutoWelding.mcTC6200P.H_Volot = vMax;
+                AutoWelding.mcTC6200P.L_Volot = vMin;
             }
             catch (Exception)
             {
 
-                throw;
+                //throw;
             }
         }
 
@@ -199,31 +198,42 @@ namespace AutoWelding.test
                 float vMin = (float)Convert.ToDouble(textBox5.Text);
                 AutoWelding.mcTC6200P.SetCurrLimH(vMax);
                 AutoWelding.mcTC6200P.SetCurrLimL(vMin);
+                AutoWelding.mcTC6200P.H_Curr = vMax;
+                AutoWelding.mcTC6200P.L_Curr = vMin;
             }
             catch (Exception)
             {
 
-                throw;
+                //throw;
             }
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            AutoWelding.mcComBoard.SelectType(ComBoard.emType.Vgd);
+            AutoWelding.mcComBoard.SelectType(emType.Cgd);
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            AutoWelding.mcComBoard.SelectType(ComBoard.emType.Vds);
+            AutoWelding.mcComBoard.SelectType(emType.Cds);
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            AutoWelding.mcComBoard.SelectType(ComBoard.emType.Vgs);
+            AutoWelding.mcComBoard.SelectType(emType.Cgs);
         }
         void mcComBoardShaked()
         {
             
+        }
+        public void saveSys()
+        {
+            openSave.RegistryOp.SaveValue("com_TC6200P", AutoWelding.mcTC6200P.comBoard.PortName);
+            openSave.RegistryOp.SaveValue("com_ComBoard", AutoWelding.mcTC6200P.comBoard.PortName);
+        }
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
  }

@@ -26,7 +26,12 @@ namespace AutoWelding
         public double rightStep;
         public double frontStep;
     };
-
+    public enum emType
+    {
+        Cgs = 0,
+        Cds = 1,
+        Cgd = 2,
+    }
     public struct VppData
     {
         public AwCoordinate coordinate;
@@ -44,7 +49,7 @@ namespace AutoWelding
         public double xStep;
         public double yStep;
     };
-
+   
 
     public struct CouplingRetData
     {
@@ -109,6 +114,7 @@ namespace AutoWelding
         // 工艺参数
         ProductParameter productParameter;
         ProductData productData = null;
+        public RunParam ParamNow = new RunParam();
 
         // 耦合返回参数
         CouplingRetData couplingRetData;
@@ -209,18 +215,31 @@ namespace AutoWelding
             ProcessPause,			//暂停
             ProcessReleaseChipShellDone //Only for releasig chip shell
         };
-
+        private void upUI()
+        {
+            comboBox1.SelectedIndex =0;
+            comboBox2.SelectedIndex =0;
+            comboBox3.SelectedIndex = 0;
+            comboBox5.SelectedIndex = ParamNow.IsLineX ? 0 : 1;
+            comboBox8.SelectedIndex = ParamNow.IsAutoRange ? 0 : 1;
+            scatterGraph1.XAxes[0].ScaleType = ParamNow.IsLineX ? NationalInstruments.UI.ScaleType.Linear : NationalInstruments.UI.ScaleType.Logarithmic;
+        }
+        private void getPare()
+        {
+            openSave.RegistryOp.GetValue("com_Agilent", ref strAgilent);
+            openSave.RegistryOp.GetValue("com_TC6200P", ref strTCCom);
+            openSave.RegistryOp.GetValue("com_ComBoard", ref strComBoard);
+        }
+       public static string strComBoard = "com1", strTCCom = "com2",strAgilent="GPIB0:17";
         public AutoWelding()
         {
             // 读取
             productParameter = ProductParameter.GetInstance();
             couplingRetData = new CouplingRetData();
-            string strCom1="com1", strCom2="com2";
-            openSave.RegistryOp.GetValue("com_TC6200P", ref strCom1);
-            openSave.RegistryOp.GetValue("com_ComBoard", ref strCom2);
-            mcTC6200P = new TC6200P(strCom1);
-            mcComBoard = new ComBoard(strCom2);
-            mcAgilent = new agilent.Agilent();
+            getPare();
+
+
+
             InitializeComponent();
             sysParam = SystemParam.GetInstance();
             excelDataList = new List<ExcelDataUnit>();
@@ -461,9 +480,18 @@ namespace AutoWelding
             //InitControls();
             //InitMenuPanel();
             //regist();
-
-
             Visible = true;
+            err fmErr = new err();
+            fmErr.ShowDialog();
+            ParamNow.IsVgs = true;
+            ParamNow.IsVgd = true;
+            ParamNow.IsVds = true;
+            ParamNow.IsAutoRange = true;
+            ParamNow.IsLineX = true;
+            comboBox1.Items.Add(mcAgilent.strAddress);
+            comboBox2.Items.Add(mcComBoard.comBoard.PortName);
+            comboBox3.Items.Add(mcTC6200P.comBoard.PortName);
+            upUI();
             //timer1.Enabled = true;
         }
 
@@ -921,35 +949,77 @@ namespace AutoWelding
                 traceInfo.IsUpdated = false;
             }
         }
+
+        private void Ctest(emType typeNow)
+        {
+            for (int i = 0; i < productParameter.PrdBatInfo.SampleSize; i++)
+            {
+                float vAdd = (ParamNow.HighVolt - ParamNow.LowVolt) / ParamNow.iPoint;
+                for (int ii = 0; ii < ParamNow.iPoint; ii++)
+                {
+                    float vOut = ParamNow.LowVolt + vAdd;
+                    if (!ParamNow.IsAutoRange)
+                    {
+                        vOut = ParamNow.VoltList[ii];
+                    }
+                    else
+                    {
+                        ParamNow.VoltList[ii] = vOut;
+                    }
+                    mcTC6200P.SetVolt(vOut);
+                    mcTC6200P.SetOn();
+                    double tempC = mcAgilent.GetMeasure();
+                    switch (typeNow)
+                    {
+                        case emType.Cgs:
+                            ParamNow.TestCgs[ii] = tempC;
+                            scatterGraph1.Plots[1].PlotXYAppend(vOut, tempC);
+                            break;
+                        case emType.Cds:
+                            ParamNow.TestCds[ii] = tempC;
+                            scatterGraph1.Plots[2].PlotXYAppend(vOut, tempC);
+                            break;
+                        case emType.Cgd:
+                            ParamNow.TestCgd[ii] = tempC;
+                            scatterGraph1.Plots[0].PlotXYAppend(vOut, tempC);
+                            break;
+                        default:
+                            break;
+                    }
+                    
+                }
+            }
+        }
         private bool autoTest()
         {
-            for (int i = 0; i <  productParameter.PrdBatInfo.SampleSize; i++)
-            {
-               
-            }
+            #region vds
+            if (ParamNow.IsVds)
+                mcComBoard.SelectType(emType.Cds);
+            Ctest(emType.Cds);
+            #endregion
+            #region Vgd
+            if (ParamNow.IsVgd)
+                mcComBoard.SelectType(emType.Cgd);
+            Ctest(emType.Cgd);
+            #endregion
+            #region Vgs
+            if (ParamNow.IsVgs)
+                mcComBoard.SelectType(emType.Cgs);
+            Ctest(emType.Cgs);
+            #endregion
             return true;
         }
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            if (productParameter.StoreSinglePrdId)
-            {
-
-            }
-            else
-            {
-                prdId = "";
-            }
-            // Data base test
-            //DabaBaseTest();
-
-            ClearProductData();
-            buttonReplaceColloid.Enabled = false;
-           // MessageBox.Show("Msg result=" + ret.ToString());
+            ParamNow.IsVds = true;
+            ParamNow.IsVgd = true;
+            ParamNow.IsVgs = true;
+            ///
         }
 
         void ClearProductData()
         {
-            txSampleSize.Text = "";
+            //txSampleSize.Text = "";
 
         }
 
@@ -1584,6 +1654,18 @@ namespace AutoWelding
 
         }
 
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ParamNow.IsLineX = comboBox5.SelectedIndex == 0;
+            scatterGraph1.XAxes[0].ScaleType = ParamNow.IsLineX ? NationalInstruments.UI.ScaleType.Linear : NationalInstruments.UI.ScaleType.Logarithmic;
+        }
+
+        private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ParamNow.IsAutoRange = comboBox8.SelectedIndex == 0;
+            tableLayoutPanel10.Visible =! ParamNow.IsAutoRange;
+        }
+
         private void AutoWelding_VisibleChanged(object sender, EventArgs e)
         {
 
@@ -1603,6 +1685,24 @@ namespace AutoWelding
         public double timeCost;
         public string prdId; //产品id
     };
+    public class RunParam
+    {
+        public bool IsVgs = false;
+        public bool IsVds = false;
+        public bool IsVgd = false;
+        public int iPoint = 50;
+        public float HighVolt = 100;
+        public float LowVolt = 0;
+        /// <summary>
+        /// 自动量程
+        /// </summary>
+        public bool IsAutoRange;
+        public bool IsLineX;
+        public float[] VoltList;
+        public double[] TestCgs;
+        public double[] TestCds;
+        public double[] TestCgd;
+    }
 
 
 }

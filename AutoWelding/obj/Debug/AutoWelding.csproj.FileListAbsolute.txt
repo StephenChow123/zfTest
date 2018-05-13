@@ -124,3 +124,4 @@ D:\Home\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.Properties.Resources.resour
 D:\Home\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.test.agilentTest.resources
 D:\Home\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.csproj.GenerateResource.Cache
 D:\Home\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.exe.licenses
+D:\Home\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.test.err.resources

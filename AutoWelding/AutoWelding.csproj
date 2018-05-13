@@ -162,6 +162,12 @@
     <Compile Include="test\agilentTest.Designer.cs">
       <DependentUpon>agilentTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="test\err.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test\err.Designer.cs">
+      <DependentUpon>err.cs</DependentUpon>
+    </Compile>
     <Compile Include="uicontrol\AwIoOutputButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -220,6 +226,9 @@
     </Compile>
     <EmbeddedResource Include="test\agilentTest.resx">
       <DependentUpon>agilentTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test\err.resx">
+      <DependentUpon>err.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
