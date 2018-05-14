@@ -40,7 +40,6 @@ D:\Git\zfTest\AutoWelding\bin\Debug\NationalInstruments.Common.Native.dll
 D:\Git\zfTest\AutoWelding\bin\Debug\NationalInstruments.UI.Styles3D.dll
 D:\Git\zfTest\AutoWelding\bin\Debug\agilent.pdb
 D:\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.csprojResolveAssemblyReference.cache
-D:\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.csproj.ResolveComReference.cache
 D:\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.Form3.resources
 D:\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.AutoWelding.resources
 D:\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.FormAbout.resources
@@ -125,3 +124,4 @@ D:\Home\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.test.agilentTest.resources
 D:\Home\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.csproj.GenerateResource.Cache
 D:\Home\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.exe.licenses
 D:\Home\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.test.err.resources
+D:\Git\zfTest\AutoWelding\obj\Debug\AutoWelding.test.err.resources
